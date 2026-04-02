@@ -5,7 +5,7 @@ const CTASection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="hero-gradient rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+        <div className="bg-navy dark:bg-card rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/20 rounded-full blur-3xl" />
           <div className="relative z-10">
