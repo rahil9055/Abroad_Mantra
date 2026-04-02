@@ -5,19 +5,7 @@ import logo from "@/assets/logo_transparent.png";
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "About Us", path: "/about" },
-  {
-    label: "Services",
-    path: "/services",
-    children: [
-      { label: "Visa Assistance", path: "/services/visa" },
-      { label: "Consultation", path: "/services/consultation" },
-      { label: "Remonstration", path: "/services/remonstration" },
-      { label: "Job Assistance", path: "/services/jobs" },
-      { label: "Accommodation", path: "/services/accommodation" },
-      { label: "Tutoring", path: "/services/tutoring" },
-    ],
-  },
+  { label: "Services", path: "/services" },
   {
     label: "Countries",
     path: "/countries",
@@ -28,10 +16,23 @@ const navItems = [
       { label: "USA", path: "/countries/usa" },
     ],
   },
-  { label: "Testimonials", path: "/testimonials" },
-  { label: "Blog", path: "/blog" },
-  { label: "FAQs", path: "/faqs" },
-  { label: "Contact", path: "/contact" },
+  {
+    label: "About",
+    path: "/about",
+    children: [
+      { label: "About Us", path: "/about" },
+      { label: "Testimonials", path: "/testimonials" },
+      { label: "FAQs", path: "/faqs" },
+    ],
+  },
+  {
+    label: "Contact",
+    path: "/contact",
+    children: [
+      { label: "Contact Us", path: "/contact" },
+      { label: "Blog", path: "/blog" },
+    ],
+  },
 ];
 
 const Navbar = () => {
@@ -61,14 +62,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
-      <div className="container mx-auto px-4 flex items-center justify-between h-20">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border" : "bg-background/80 backdrop-blur-sm"}`}>
+      <div className="container mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Abroad Mantra" className="h-14 w-auto" />
+          <img src={logo} alt="Abroad Mantra" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-0.5">
           {navItems.map((item) => (
             <div
               key={item.label}
@@ -78,18 +79,18 @@ const Navbar = () => {
             >
               <Link
                 to={item.path}
-                className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors flex items-center gap-1 rounded-md hover:bg-secondary/50"
+                className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors flex items-center gap-1 rounded-md"
               >
                 {item.label}
                 {item.children && <ChevronDown className="h-3 w-3" />}
               </Link>
               {item.children && openDropdown === item.label && (
-                <div className="absolute top-full left-0 mt-1 w-52 bg-card rounded-lg shadow-xl border border-border p-2 animate-fade-in">
+                <div className="absolute top-full left-0 mt-1 w-48 bg-card rounded-lg shadow-xl border border-border p-1.5 animate-fade-in">
                   {item.children.map((child) => (
                     <Link
                       key={child.label}
                       to={child.path}
-                      className="block px-3 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      className="block px-3 py-2 text-sm text-foreground/70 hover:text-primary hover:bg-secondary rounded-md transition-colors"
                     >
                       {child.label}
                     </Link>
@@ -100,12 +101,12 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-3">
-          <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-secondary transition-colors text-foreground/70">
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+        <div className="flex items-center gap-2">
+          <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-secondary transition-colors text-foreground/60">
+            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
-          <Link to="/contact" className="hidden lg:inline-flex px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
-            Get Started
+          <Link to="/contact" className="hidden lg:inline-flex px-5 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+            Get Free Consultation
           </Link>
           <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-foreground">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -143,7 +144,7 @@ const Navbar = () => {
               </div>
             ))}
             <Link to="/contact" onClick={() => setIsOpen(false)} className="block mx-4 mt-4 px-5 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-semibold text-center">
-              Get Started
+              Get Free Consultation
             </Link>
           </div>
         </div>
