@@ -24,7 +24,7 @@ const CTASection = () => {
               </p>
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 animate-pulse-glow"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-background text-primary rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
               >
                 Book Free Consultation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>

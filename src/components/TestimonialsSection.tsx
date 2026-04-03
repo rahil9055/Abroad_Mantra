@@ -56,10 +56,10 @@ const StatCard = ({ icon: Icon, value, suffix, label, isVisible }: {
       <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/20 mb-3 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
         <Icon className="h-6 w-6 text-primary" />
       </div>
-      <div className="text-2xl md:text-3xl font-bold text-navy-foreground font-heading">
+      <div className="text-2xl md:text-3xl font-bold text-foreground font-heading">
         {count}{suffix}
       </div>
-      <div className="text-navy-foreground/60 text-sm mt-1">{label}</div>
+      <div className="text-muted-foreground text-sm mt-1">{label}</div>
     </div>
   );
 };
