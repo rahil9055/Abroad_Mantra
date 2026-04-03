@@ -1,3 +1,10 @@
+import choosingCountryImg from "@/assets/blog/choosing-country.jpg";
+import visaMistakesImg from "@/assets/blog/visa-mistakes.jpg";
+import ieltsImg from "@/assets/blog/ielts-prep.jpg";
+import ukCostImg from "@/assets/blog/uk-cost.jpg";
+import scholarshipsImg from "@/assets/blog/scholarships.jpg";
+import sopImg from "@/assets/blog/sop-writing.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -9,6 +16,7 @@ export interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   content: string;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -22,6 +30,7 @@ export const blogPosts: BlogPost[] = [
     author: "Rahul Sharma",
     metaTitle: "How to Choose the Right Country for Studying Abroad | AbroadMantra",
     metaDescription: "Compare UK, Canada, Australia & USA for studying abroad. Learn about tuition fees, living costs, post-study work visas, and quality of life to pick your ideal destination.",
+    image: choosingCountryImg,
     content: `
 ## Introduction
 
@@ -99,6 +108,7 @@ There's no single "best" country — the right choice depends on your goals, bud
     author: "Priya Patel",
     metaTitle: "Top 10 Student Visa Tips 2026 – Avoid Refusal | AbroadMantra",
     metaDescription: "Get your student visa approved on the first attempt. Expert tips on documentation, financial proof, SOP, interview prep, and common mistakes to avoid in 2026.",
+    image: visaMistakesImg,
     content: `
 ## Introduction
 
@@ -203,6 +213,7 @@ A successful visa application is about preparation, honesty, and attention to de
     author: "Amit Kumar",
     metaTitle: "IELTS Preparation Guide 2026 – Score 7+ | AbroadMantra",
     metaDescription: "Complete IELTS preparation guide with section-wise strategies for Listening, Reading, Writing & Speaking. Expert tips to score 7+ band for study abroad applications.",
+    image: ieltsImg,
     content: `
 ## Introduction
 
@@ -304,6 +315,7 @@ Scoring 7+ on IELTS is absolutely achievable with the right strategy and consist
     author: "Sneha Reddy",
     metaTitle: "Cost of Living in UK 2026 for Students | AbroadMantra",
     metaDescription: "Complete breakdown of UK living costs for international students in 2026. Accommodation, food, transport & entertainment expenses in London, Manchester & Edinburgh.",
+    image: ukCostImg,
     content: `
 ## Introduction
 
@@ -393,6 +405,7 @@ Living in the UK as an international student is manageable with proper budgeting
     author: "Rahul Sharma",
     metaTitle: "Part-Time Jobs for International Students Abroad | AbroadMantra",
     metaDescription: "Complete guide to finding part-time jobs while studying in UK, Canada, Australia & USA. Work rights, best job types, earning potential & tips for balancing work and study.",
+    image: scholarshipsImg,
     content: `
 ## Introduction
 
@@ -498,6 +511,7 @@ Part-time work abroad is a fantastic way to support yourself financially while g
     author: "Priya Patel",
     metaTitle: "How to Write a Winning SOP for Study Abroad | AbroadMantra",
     metaDescription: "Learn how to write a compelling Statement of Purpose (SOP) for university applications. Structure, examples, dos and don'ts from experts who've helped 1000+ students.",
+    image: sopImg,
     content: `
 ## Introduction
 

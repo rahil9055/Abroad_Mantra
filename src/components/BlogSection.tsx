@@ -35,8 +35,17 @@ const BlogSection = () => {
             <ScrollReveal key={post.slug} delay={i * 0.1} direction="up">
               <Link to={`/blog/${post.slug}`} className="block h-full">
                 <article className="group rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-500 h-full flex flex-col">
-                  <div className="h-28 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 flex items-center justify-center">
-                    <span className={`px-3 py-1 text-xs font-semibold rounded-full ${categoryColors[post.category] || "bg-secondary text-foreground"}`}>
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      width={800}
+                      height={512}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <span className={`absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full ${categoryColors[post.category] || "bg-secondary text-foreground"}`}>
                       {post.category}
                     </span>
                   </div>
