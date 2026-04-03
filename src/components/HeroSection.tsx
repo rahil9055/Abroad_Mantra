@@ -3,6 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { useEffect, useRef, useCallback } from "react";
 import heroStudent from "@/assets/hero-student.png";
 import { useTypewriter, useAnimatedCounter, useScrollReveal } from "@/hooks/useAnimations";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const countries = [
   { flag: "🇬🇧", name: "Germany" },
