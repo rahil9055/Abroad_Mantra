@@ -15,6 +15,10 @@ const WhyChooseUsSection = () => {
     <section className="py-20 bg-secondary relative overflow-hidden">
       {/* Background deco */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl animate-blob" />
+      {/* Lottie decoration */}
+      <div className="absolute bottom-5 left-5 w-36 h-36 opacity-15 pointer-events-none">
+        <LottieAnimation url="https://assets2.lottiefiles.com/packages/lf20_5ngs2ksb.json" className="w-full h-full" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
