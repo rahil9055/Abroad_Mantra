@@ -59,13 +59,13 @@ const App = () => (
           <Route path="/countries/australia" element={<Australia />} />
           <Route path="/countries/canada" element={<Canada />} />
           <Route path="/countries/usa" element={<USA />} />
-          <Route path="/testimonials" element={<PageWrapper title="Testimonials" />} />
-          <Route path="/blog" element={<PageWrapper title="Blog" />} />
-          <Route path="/faqs" element={<PageWrapper title="FAQs" />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PageWrapper title="Privacy Policy" />} />
-          <Route path="/terms" element={<PageWrapper title="Terms & Conditions" />} />
-          <Route path="/refund-policy" element={<PageWrapper title="Refund Policy" />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
