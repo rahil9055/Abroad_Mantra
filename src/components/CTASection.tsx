@@ -7,7 +7,7 @@ const CTASection = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <ScrollReveal direction="scale">
-          <div className="bg-navy dark:bg-card rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+          <div className="bg-primary rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
             {/* Animated decorations */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-blob" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: "-4s" }} />
