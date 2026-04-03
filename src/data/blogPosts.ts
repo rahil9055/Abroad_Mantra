@@ -315,6 +315,7 @@ Scoring 7+ on IELTS is absolutely achievable with the right strategy and consist
     author: "Sneha Reddy",
     metaTitle: "Cost of Living in UK 2026 for Students | AbroadMantra",
     metaDescription: "Complete breakdown of UK living costs for international students in 2026. Accommodation, food, transport & entertainment expenses in London, Manchester & Edinburgh.",
+    image: ukCostImg,
     content: `
 ## Introduction
 
