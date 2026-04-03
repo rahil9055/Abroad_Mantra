@@ -108,6 +108,7 @@ There's no single "best" country — the right choice depends on your goals, bud
     author: "Priya Patel",
     metaTitle: "Top 10 Student Visa Tips 2026 – Avoid Refusal | AbroadMantra",
     metaDescription: "Get your student visa approved on the first attempt. Expert tips on documentation, financial proof, SOP, interview prep, and common mistakes to avoid in 2026.",
+    image: visaMistakesImg,
     content: `
 ## Introduction
 
