@@ -30,6 +30,7 @@ export const blogPosts: BlogPost[] = [
     author: "Rahul Sharma",
     metaTitle: "How to Choose the Right Country for Studying Abroad | AbroadMantra",
     metaDescription: "Compare UK, Canada, Australia & USA for studying abroad. Learn about tuition fees, living costs, post-study work visas, and quality of life to pick your ideal destination.",
+    image: choosingCountryImg,
     content: `
 ## Introduction
 
