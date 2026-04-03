@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <img src={logo} alt="Abroad Mantra" className="h-16 w-auto mb-4" />
+            <img src={logo} alt="Abroad Mantra" className="h-16 w-auto mb-4 brightness-110 contrast-110" />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Study, Work, Settle — We Make It Happen. Your trusted partner for international education and career guidance.
             </p>
