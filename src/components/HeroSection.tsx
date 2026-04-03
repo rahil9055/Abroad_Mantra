@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
+import { useEffect, useRef, useCallback } from "react";
 import heroStudent from "@/assets/hero-student.png";
 import { useTypewriter, useAnimatedCounter, useScrollReveal } from "@/hooks/useAnimations";
 
@@ -12,6 +13,27 @@ const countries = [
 ];
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const blobsRef = useRef<HTMLDivElement>(null);
+  const shapesRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    if (!sectionRef.current) return;
+    const scrollY = window.scrollY;
+    const speed = 0.4;
+    if (blobsRef.current) {
+      blobsRef.current.style.transform = `translateY(${scrollY * speed}px)`;
+    }
+    if (shapesRef.current) {
+      shapesRef.current.style.transform = `translateY(${scrollY * speed * 0.6}px)`;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   const typedText = useTypewriter(
     ["From Visa to Jobs", "Accommodation to Support", "Consultation to Career"],
     70, 40, 2500
@@ -22,18 +44,22 @@ const HeroSection = () => {
   const successRate = useAnimatedCounter(95, 1800, statsVisible);
 
   return (
-    <section className="relative hero-gradient pt-28 pb-0 overflow-hidden min-h-[85vh]">
-      {/* Animated blobs */}
-      <div className="absolute top-20 right-1/4 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl animate-blob" />
-      <div className="absolute bottom-40 left-10 w-[300px] h-[300px] bg-accent/8 rounded-full blur-3xl animate-blob" style={{ animationDelay: "-4s" }} />
-      <div className="absolute top-1/2 right-10 w-[200px] h-[200px] bg-success/6 rounded-full blur-2xl animate-float-slow" />
+    <section ref={sectionRef} className="relative hero-gradient pt-28 pb-0 overflow-hidden min-h-[85vh]">
+      {/* Parallax blobs */}
+      <div ref={blobsRef} className="absolute inset-0 will-change-transform transition-transform duration-100 ease-out">
+        <div className="absolute top-20 right-1/4 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-40 left-10 w-[300px] h-[300px] bg-accent/8 rounded-full blur-3xl animate-blob" style={{ animationDelay: "-4s" }} />
+        <div className="absolute top-1/2 right-10 w-[200px] h-[200px] bg-success/6 rounded-full blur-2xl animate-float-slow" />
+      </div>
 
-      {/* Floating geometric shapes */}
-      <div className="absolute top-32 right-[15%] w-4 h-4 bg-primary/20 rounded-full animate-float" style={{ animationDelay: "-1s" }} />
-      <div className="absolute top-48 right-[25%] w-3 h-3 bg-accent/30 rotate-45 animate-float-slow" style={{ animationDelay: "-3s" }} />
-      <div className="absolute bottom-32 left-[20%] w-5 h-5 border-2 border-primary/20 rounded-full animate-float-reverse" />
-      <div className="absolute top-40 left-[5%] w-3 h-3 bg-accent/20 rounded-sm rotate-12 animate-bounce-subtle" style={{ animationDelay: "-2s" }} />
-      <div className="absolute bottom-48 right-[40%] w-2 h-8 bg-primary/10 rounded-full rotate-45 animate-float" style={{ animationDelay: "-5s" }} />
+      {/* Parallax geometric shapes (slower layer) */}
+      <div ref={shapesRef} className="absolute inset-0 will-change-transform transition-transform duration-100 ease-out">
+        <div className="absolute top-32 right-[15%] w-4 h-4 bg-primary/20 rounded-full animate-float" style={{ animationDelay: "-1s" }} />
+        <div className="absolute top-48 right-[25%] w-3 h-3 bg-accent/30 rotate-45 animate-float-slow" style={{ animationDelay: "-3s" }} />
+        <div className="absolute bottom-32 left-[20%] w-5 h-5 border-2 border-primary/20 rounded-full animate-float-reverse" />
+        <div className="absolute top-40 left-[5%] w-3 h-3 bg-accent/20 rounded-sm rotate-12 animate-bounce-subtle" style={{ animationDelay: "-2s" }} />
+        <div className="absolute bottom-48 right-[40%] w-2 h-8 bg-primary/10 rounded-full rotate-45 animate-float" style={{ animationDelay: "-5s" }} />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-end min-h-[calc(85vh-7rem)]">
