@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Facebook, L
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [

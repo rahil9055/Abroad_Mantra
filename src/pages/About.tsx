@@ -3,6 +3,7 @@ import { ArrowRight, Target, Eye, Users, GraduationCap, Globe, Award, Heart, Che
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const values = [
   { icon: Heart, title: "Student First", desc: "Every decision we make puts your success and well-being at the center." },
