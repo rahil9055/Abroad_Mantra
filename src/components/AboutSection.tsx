@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FileText, Briefcase, Home, BookOpen, MessageSquare } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const services = [
   { icon: FileText, title: "Visa Assistance", desc: "Documentation & Filing", path: "/services/visa", color: "bg-primary/10 text-primary" },
