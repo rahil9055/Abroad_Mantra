@@ -1,5 +1,6 @@
 import { Users, TrendingUp, DollarSign, LifeBuoy, Heart } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const reasons = [
   { icon: Users, title: "Personalized Guidance", desc: "Tailored advice for your unique situation", gradient: "from-primary/20 to-primary/5" },
