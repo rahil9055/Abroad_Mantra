@@ -61,8 +61,8 @@ const Blog = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 0.08} direction="up">
+              <Link to={`/blog/${post.slug}`} className="block h-full">
                 <article className="glass-card gradient-border rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
-                  {/* Category banner */}
                   <div className="h-32 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 flex items-center justify-center">
                     <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">{post.category}</span>
                   </div>
@@ -80,6 +80,7 @@ const Blog = () => {
                     </div>
                   </div>
                 </article>
+              </Link>
               </ScrollReveal>
             ))}
           </div>
