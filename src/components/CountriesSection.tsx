@@ -13,6 +13,10 @@ const CountriesSection = () => {
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      {/* Floating Lottie plane */}
+      <div className="absolute top-10 right-10 w-32 h-32 opacity-20 pointer-events-none">
+        <LottieAnimation url="https://assets3.lottiefiles.com/packages/lf20_jR229r.json" className="w-full h-full" />
+      </div>
 
       <div className="container mx-auto px-4">
         <ScrollReveal>
