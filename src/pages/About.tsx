@@ -30,6 +30,10 @@ const team = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About Us – AbroadMantra | Trusted Study Abroad Consultancy"
+        description="Learn about AbroadMantra's mission, team, and 1000+ success stories helping international students study in UK, Canada, Australia, and USA."
+      />
       <Navbar />
 
       {/* Hero Banner */}
