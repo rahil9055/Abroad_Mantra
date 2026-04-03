@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
+import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PlaceholderPage from "./components/PlaceholderPage.tsx";
 import Navbar from "./components/Navbar.tsx";
@@ -44,7 +45,7 @@ const App = () => (
           <Route path="/testimonials" element={<PageWrapper title="Testimonials" />} />
           <Route path="/blog" element={<PageWrapper title="Blog" />} />
           <Route path="/faqs" element={<PageWrapper title="FAQs" />} />
-          <Route path="/contact" element={<PageWrapper title="Contact Us" />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PageWrapper title="Privacy Policy" />} />
           <Route path="/terms" element={<PageWrapper title="Terms & Conditions" />} />
           <Route path="/refund-policy" element={<PageWrapper title="Refund Policy" />} />
