@@ -16,6 +16,10 @@ import Remonstration from "./pages/services/Remonstration.tsx";
 import Jobs from "./pages/services/Jobs.tsx";
 import Accommodation from "./pages/services/Accommodation.tsx";
 import Tutoring from "./pages/services/Tutoring.tsx";
+import UK from "./pages/countries/UK.tsx";
+import Australia from "./pages/countries/Australia.tsx";
+import Canada from "./pages/countries/Canada.tsx";
+import USA from "./pages/countries/USA.tsx";
 
 const queryClient = new QueryClient();
 
