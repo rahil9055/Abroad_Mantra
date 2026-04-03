@@ -8,7 +8,6 @@ const countries = [
     name: "United Kingdom",
     desc: "World-class universities, post-study work visa, multicultural environment.",
     path: "/countries/uk",
-    lottie: "https://assets2.lottiefiles.com/packages/lf20_soCRuE.json",
     flag: "🇬🇧",
   },
   {
@@ -16,7 +15,6 @@ const countries = [
     name: "Australia",
     desc: "PR pathways, excellent quality of life, part-time work opportunities.",
     path: "/countries/australia",
-    lottie: "https://assets2.lottiefiles.com/packages/lf20_xkutniaq.json",
     flag: "🇦🇺",
   },
   {
@@ -24,7 +22,6 @@ const countries = [
     name: "Canada",
     desc: "Affordable education, immigration-friendly policies, diverse communities.",
     path: "/countries/canada",
-    lottie: "https://assets10.lottiefiles.com/packages/lf20_hehjmfep.json",
     flag: "🇨🇦",
   },
   {
@@ -32,7 +29,6 @@ const countries = [
     name: "USA",
     desc: "Top-ranked universities, OPT/CPT programs, vast career scope.",
     path: "/countries/usa",
-    lottie: "https://assets2.lottiefiles.com/packages/lf20_bkmfke0w.json",
     flag: "🇺🇸",
   },
 ];
