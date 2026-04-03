@@ -24,6 +24,7 @@ import USA from "./pages/countries/USA.tsx";
 
 
 import Blog from "./pages/Blog.tsx";
+import BlogPostPage from "./pages/BlogPost.tsx";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy.tsx";
 import Terms from "./pages/legal/Terms.tsx";
 import RefundPolicy from "./pages/legal/RefundPolicy.tsx";
