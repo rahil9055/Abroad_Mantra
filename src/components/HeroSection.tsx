@@ -3,6 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { useEffect, useRef, useCallback } from "react";
 import heroStudent from "@/assets/hero-student.png";
 import { useTypewriter, useAnimatedCounter, useScrollReveal } from "@/hooks/useAnimations";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const countries = [
   { flag: "🇬🇧", name: "Germany" },
@@ -139,9 +140,13 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Image with float animation */}
-          <div className="hidden lg:flex justify-end items-end self-end">
-            <div className="animate-float" style={{ animationDuration: "5s" }}>
+          {/* Right — Lottie animation with student image overlay */}
+          <div className="hidden lg:flex justify-end items-end self-end relative">
+            {/* Background Lottie globe/travel animation */}
+            <div className="absolute -top-10 -right-10 w-[350px] h-[350px] opacity-30">
+              <LottieAnimation url="https://assets2.lottiefiles.com/packages/lf20_UJNc2t.json" className="w-full h-full" />
+            </div>
+            <div className="animate-float relative z-10" style={{ animationDuration: "5s" }}>
               <img
                 src={heroStudent}
                 alt="Student ready to study abroad"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const CTASection = () => {
   return (
@@ -14,6 +15,10 @@ const CTASection = () => {
             <div className="absolute top-10 left-10 w-4 h-4 bg-accent/30 rounded-full animate-float" />
             <div className="absolute bottom-10 right-20 w-3 h-3 bg-primary/30 rounded-full animate-float-reverse" />
             <div className="absolute top-1/2 right-10 w-20 h-20 border border-primary/10 rounded-full animate-spin-slow" />
+            {/* Lottie rocket */}
+            <div className="absolute bottom-5 right-5 w-28 h-28 opacity-20 pointer-events-none">
+              <LottieAnimation url="https://assets10.lottiefiles.com/packages/lf20_kd1yRi.json" className="w-full h-full" />
+            </div>
 
             <div className="relative z-10">
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">

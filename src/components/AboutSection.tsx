@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FileText, Briefcase, Home, BookOpen, MessageSquare } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const services = [
   { icon: FileText, title: "Visa Assistance", desc: "Documentation & Filing", path: "/services/visa", color: "bg-primary/10 text-primary" },
@@ -13,8 +14,10 @@ const services = [
 const AboutSection = () => {
   return (
     <section className="py-20 bg-background relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-2xl animate-float-slow" />
+      {/* Decorative Lottie */}
+      <div className="absolute -top-5 -right-5 w-48 h-48 opacity-15 pointer-events-none">
+        <LottieAnimation url="https://assets9.lottiefiles.com/packages/lf20_inti4oxf.json" className="w-full h-full" />
+      </div>
       <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl animate-float" style={{ animationDelay: "-3s" }} />
 
       <div className="container mx-auto px-4">

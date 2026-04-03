@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FileText, MessageSquare, RotateCcw, Briefcase, Home, BookOpen, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const services = [
   { icon: FileText, title: "Visa Assistance", desc: "Student visa applications, document checklists, SOP & LOR guidance, and interview preparation.", path: "/services/visa" },
@@ -16,6 +17,10 @@ const ServicesSection = () => {
     <section className="py-20 section-gradient relative overflow-hidden">
       <div className="absolute top-20 right-0 w-32 h-32 border border-primary/10 rounded-full animate-spin-slow" />
       <div className="absolute bottom-20 left-10 w-20 h-20 border border-accent/10 rounded-lg rotate-45 animate-float-slow" />
+      {/* Lottie study animation */}
+      <div className="absolute top-10 left-5 w-40 h-40 opacity-15 pointer-events-none">
+        <LottieAnimation url="https://assets4.lottiefiles.com/packages/lf20_svy4ivvy.json" className="w-full h-full" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
