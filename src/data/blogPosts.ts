@@ -213,6 +213,7 @@ A successful visa application is about preparation, honesty, and attention to de
     author: "Amit Kumar",
     metaTitle: "IELTS Preparation Guide 2026 – Score 7+ | AbroadMantra",
     metaDescription: "Complete IELTS preparation guide with section-wise strategies for Listening, Reading, Writing & Speaking. Expert tips to score 7+ band for study abroad applications.",
+    image: ieltsImg,
     content: `
 ## Introduction
 
