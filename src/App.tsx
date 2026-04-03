@@ -10,6 +10,12 @@ import NotFound from "./pages/NotFound.tsx";
 import PlaceholderPage from "./components/PlaceholderPage.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from "./components/Footer.tsx";
+import VisaAssistance from "./pages/services/VisaAssistance.tsx";
+import Consultation from "./pages/services/Consultation.tsx";
+import Remonstration from "./pages/services/Remonstration.tsx";
+import Jobs from "./pages/services/Jobs.tsx";
+import Accommodation from "./pages/services/Accommodation.tsx";
+import Tutoring from "./pages/services/Tutoring.tsx";
 
 const queryClient = new QueryClient();
 
@@ -31,12 +37,12 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<PageWrapper title="Our Services" />} />
-          <Route path="/services/visa" element={<PageWrapper title="Visa Assistance" />} />
-          <Route path="/services/consultation" element={<PageWrapper title="Consultation Services" />} />
-          <Route path="/services/remonstration" element={<PageWrapper title="Remonstration / Appeals" />} />
-          <Route path="/services/jobs" element={<PageWrapper title="Job Assistance" />} />
-          <Route path="/services/accommodation" element={<PageWrapper title="Accommodation Support" />} />
-          <Route path="/services/tutoring" element={<PageWrapper title="Tutoring Services" />} />
+          <Route path="/services/visa" element={<VisaAssistance />} />
+          <Route path="/services/consultation" element={<Consultation />} />
+          <Route path="/services/remonstration" element={<Remonstration />} />
+          <Route path="/services/jobs" element={<Jobs />} />
+          <Route path="/services/accommodation" element={<Accommodation />} />
+          <Route path="/services/tutoring" element={<Tutoring />} />
           <Route path="/countries" element={<PageWrapper title="Study Destinations" />} />
           <Route path="/countries/uk" element={<PageWrapper title="Study in United Kingdom" />} />
           <Route path="/countries/australia" element={<PageWrapper title="Study in Australia" />} />
