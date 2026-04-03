@@ -274,3 +274,15 @@
   background: hsl(var(--accent) / 0.4);
   animation-delay: -3s;
 }
+
+@keyframes flag-wave {
+  0%, 100% { transform: perspective(200px) rotateY(0deg) skewY(0deg); }
+  25% { transform: perspective(200px) rotateY(2deg) skewY(-1deg); }
+  50% { transform: perspective(200px) rotateY(-1deg) skewY(0.5deg); }
+  75% { transform: perspective(200px) rotateY(1.5deg) skewY(-0.5deg); }
+}
+
+.animate-flag-wave {
+  animation: flag-wave 3s ease-in-out infinite;
+  transform-origin: left center;
+}

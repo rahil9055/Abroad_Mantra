@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
-import LottieAnimation from "@/components/LottieAnimation";
+import { UKFlag, AustraliaFlag, CanadaFlag, USAFlag } from "@/components/AnimatedFlags";
 
 const countries = [
   {
@@ -8,28 +8,28 @@ const countries = [
     name: "United Kingdom",
     desc: "World-class universities, post-study work visa, multicultural environment.",
     path: "/countries/uk",
-    flag: "🇬🇧",
+    Flag: UKFlag,
   },
   {
     code: "AU",
     name: "Australia",
     desc: "PR pathways, excellent quality of life, part-time work opportunities.",
     path: "/countries/australia",
-    flag: "🇦🇺",
+    Flag: AustraliaFlag,
   },
   {
     code: "CA",
     name: "Canada",
     desc: "Affordable education, immigration-friendly policies, diverse communities.",
     path: "/countries/canada",
-    flag: "🇨🇦",
+    Flag: CanadaFlag,
   },
   {
     code: "US",
     name: "USA",
     desc: "Top-ranked universities, OPT/CPT programs, vast career scope.",
     path: "/countries/usa",
-    flag: "🇺🇸",
+    Flag: USAFlag,
   },
 ];
 
@@ -57,9 +57,9 @@ const CountriesSection = () => {
                 to={country.path}
                 className="group block rounded-2xl border border-border border-dashed bg-card p-8 text-center hover:shadow-2xl hover:border-primary/30 hover:border-solid hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
               >
-                {/* Flag emoji */}
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-6xl group-hover:scale-110 transition-transform duration-300">{country.flag}</span>
+                {/* Animated SVG Flag */}
+                <div className="w-24 h-16 mx-auto mb-5 group-hover:scale-110 transition-transform duration-500">
+                  <country.Flag className="w-full h-full" />
                 </div>
 
                 {/* Country code */}
