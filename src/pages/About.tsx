@@ -3,6 +3,7 @@ import { ArrowRight, Target, Eye, Users, GraduationCap, Globe, Award, Heart, Che
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const values = [
   { icon: Heart, title: "Student First", desc: "Every decision we make puts your success and well-being at the center." },
@@ -29,6 +30,10 @@ const team = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About Us – AbroadMantra | Trusted Study Abroad Consultancy"
+        description="Learn about AbroadMantra's mission, team, and 1000+ success stories helping international students study in UK, Canada, Australia, and USA."
+      />
       <Navbar />
 
       {/* Hero Banner */}
