@@ -56,10 +56,10 @@ const StatCard = ({ icon: Icon, value, suffix, label, isVisible }: {
       <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/20 mb-3 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
         <Icon className="h-6 w-6 text-primary" />
       </div>
-      <div className="text-2xl md:text-3xl font-bold text-navy-foreground font-heading">
+      <div className="text-2xl md:text-3xl font-bold text-foreground font-heading">
         {count}{suffix}
       </div>
-      <div className="text-navy-foreground/60 text-sm mt-1">{label}</div>
+      <div className="text-muted-foreground text-sm mt-1">{label}</div>
     </div>
   );
 };
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
   const t = testimonials[active];
 
   return (
-    <section className="py-24 bg-navy dark:bg-card relative overflow-hidden">
+    <section className="py-24 bg-secondary relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-blob" />
@@ -115,10 +115,10 @@ const TestimonialsSection = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 tracking-wide">
               ⭐ Student Stories
             </span>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-navy-foreground mb-4">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
               Trusted by <span className="text-primary">Thousands</span> of Students
             </h2>
-            <p className="text-navy-foreground/60 text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Real experiences from students who achieved their dreams with Abroad Mantra
             </p>
           </div>
