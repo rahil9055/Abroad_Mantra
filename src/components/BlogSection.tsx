@@ -33,23 +33,25 @@ const BlogSection = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {posts.map((post, i) => (
             <ScrollReveal key={post.slug} delay={i * 0.1} direction="up">
-              <article className="group rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-500 h-full flex flex-col">
-                <div className="h-28 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 flex items-center justify-center">
-                  <span className={`px-3 py-1 text-xs font-semibold rounded-full ${categoryColors[post.category] || "bg-secondary text-foreground"}`}>
-                    {post.category}
-                  </span>
-                </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="font-heading text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-border">
-                    <span className="flex items-center gap-1"><User className="h-3 w-3" />{post.author}</span>
-                    <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
+              <Link to={`/blog/${post.slug}`} className="block h-full">
+                <article className="group rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+                  <div className="h-28 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 flex items-center justify-center">
+                    <span className={`px-3 py-1 text-xs font-semibold rounded-full ${categoryColors[post.category] || "bg-secondary text-foreground"}`}>
+                      {post.category}
+                    </span>
                   </div>
-                </div>
-              </article>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="font-heading text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-border">
+                      <span className="flex items-center gap-1"><User className="h-3 w-3" />{post.author}</span>
+                      <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
