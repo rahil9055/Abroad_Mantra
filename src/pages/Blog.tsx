@@ -5,14 +5,9 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 
-const posts = [
-  { slug: "how-to-choose-right-country", title: "How to Choose the Right Country for Studying Abroad", excerpt: "Confused between UK, Canada, Australia, and USA? Here's a comprehensive guide to help you pick the best study destination based on budget, career goals, and lifestyle.", category: "Guides", date: "March 28, 2026", readTime: "8 min read", author: "Rahul Sharma" },
-  { slug: "student-visa-tips-2026", title: "Top 10 Tips for a Successful Student Visa Application in 2026", excerpt: "Avoid common mistakes that lead to visa refusals. Our experts share the most important tips for getting your student visa approved on the first attempt.", category: "Visa Tips", date: "March 20, 2026", readTime: "6 min read", author: "Priya Patel" },
-  { slug: "ielts-preparation-guide", title: "IELTS Preparation: A Complete Guide for International Students", excerpt: "Score 7+ on IELTS with our proven strategies covering all four sections — Listening, Reading, Writing, and Speaking.", category: "Test Prep", date: "March 15, 2026", readTime: "10 min read", author: "Amit Kumar" },
-  { slug: "cost-of-living-uk-2026", title: "Cost of Living in UK for International Students (2026 Guide)", excerpt: "A detailed breakdown of accommodation, food, transport, and entertainment expenses in major UK cities including London, Manchester, and Edinburgh.", category: "Living Abroad", date: "March 10, 2026", readTime: "7 min read", author: "Sneha Reddy" },
-  { slug: "part-time-jobs-abroad", title: "Finding Part-Time Jobs While Studying Abroad: A Complete Guide", excerpt: "Learn about work rights, best job types, where to look, and how to balance work with studies in the UK, Canada, Australia, and USA.", category: "Career", date: "March 5, 2026", readTime: "9 min read", author: "Rahul Sharma" },
-  { slug: "sop-writing-tips", title: "How to Write a Winning Statement of Purpose (SOP)", excerpt: "Your SOP can make or break your university application. Learn the structure, dos and don'ts, and see examples that got students into top universities.", category: "Applications", date: "February 28, 2026", readTime: "8 min read", author: "Priya Patel" },
-];
+import { blogPosts } from "@/data/blogPosts";
+
+const posts = blogPosts;
 
 const categories = ["All", "Guides", "Visa Tips", "Test Prep", "Living Abroad", "Career", "Applications"];
 
