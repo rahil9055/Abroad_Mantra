@@ -5,7 +5,19 @@ import logo from "@/assets/logo_transparent.png";
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "Services", path: "/services" },
+  { label: "About", path: "/about" },
+  {
+    label: "Services",
+    path: "/services",
+    children: [
+      { label: "Visa Assistance", path: "/services/visa" },
+      { label: "Consultation", path: "/services/consultation" },
+      { label: "Remonstration", path: "/services/remonstration" },
+      { label: "Jobs", path: "/services/jobs" },
+      { label: "Accommodation", path: "/services/accommodation" },
+      { label: "Tutoring", path: "/services/tutoring" },
+    ],
+  },
   {
     label: "Countries",
     path: "/countries",
@@ -16,23 +28,9 @@ const navItems = [
       { label: "USA", path: "/countries/usa" },
     ],
   },
-  {
-    label: "About",
-    path: "/about",
-    children: [
-      { label: "About Us", path: "/about" },
-      { label: "Testimonials", path: "/testimonials" },
-      { label: "FAQs", path: "/faqs" },
-    ],
-  },
-  {
-    label: "Contact",
-    path: "/contact",
-    children: [
-      { label: "Contact Us", path: "/contact" },
-      { label: "Blog", path: "/blog" },
-    ],
-  },
+  { label: "Testimonials", path: "/testimonials" },
+  { label: "Blog", path: "/blog" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
