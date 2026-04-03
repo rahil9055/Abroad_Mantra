@@ -5,6 +5,7 @@ import MentorSection from "@/components/MentorSection";
 import ServicesSection from "@/components/ServicesSection";
 import CountriesSection from "@/components/CountriesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
