@@ -31,7 +31,7 @@ const WhyChooseUsSection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {reasons.map((r, i) => (
             <ScrollReveal key={r.title} delay={i * 0.12} direction="up">
-              <div className="group flex flex-col items-center text-center p-6 bg-card rounded-2xl border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+              <div className="group flex flex-col items-center text-center p-6 rounded-2xl glass-card gradient-border hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
                 {/* Hover gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-b ${r.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="relative z-10">
