@@ -2,11 +2,9 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const posts = [
-  { slug: "how-to-choose-right-country", title: "How to Choose the Right Country for Studying Abroad", excerpt: "Confused between UK, Canada, Australia, and USA? Here's a guide to help you pick the best destination.", category: "Guides", date: "March 28, 2026", readTime: "8 min", author: "Rahul Sharma" },
-  { slug: "student-visa-tips-2026", title: "Top 10 Tips for a Successful Student Visa Application", excerpt: "Avoid common mistakes that lead to visa refusals with these expert tips.", category: "Visa Tips", date: "March 20, 2026", readTime: "6 min", author: "Priya Patel" },
-  { slug: "ielts-preparation-guide", title: "IELTS Preparation: A Complete Guide for Students", excerpt: "Score 7+ on IELTS with proven strategies covering all four sections.", category: "Test Prep", date: "March 15, 2026", readTime: "10 min", author: "Amit Kumar" },
-];
+import { blogPosts } from "@/data/blogPosts";
+
+const posts = blogPosts.slice(0, 3);
 
 const categoryColors: Record<string, string> = {
   Guides: "bg-primary/10 text-primary",
