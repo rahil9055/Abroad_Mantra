@@ -59,7 +59,7 @@ const App = () => (
           <Route path="/countries/australia" element={<Australia />} />
           <Route path="/countries/canada" element={<Canada />} />
           <Route path="/countries/usa" element={<USA />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          
           <Route path="/blog" element={<Blog />} />
           
           <Route path="/contact" element={<Contact />} />
