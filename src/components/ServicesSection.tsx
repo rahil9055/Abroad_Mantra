@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FileText, MessageSquare, RotateCcw, Briefcase, Home, BookOpen, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import LottieAnimation from "@/components/LottieAnimation";
 
 const services = [
   { icon: FileText, title: "Visa Assistance", desc: "Student visa applications, document checklists, SOP & LOR guidance, and interview preparation.", path: "/services/visa" },
