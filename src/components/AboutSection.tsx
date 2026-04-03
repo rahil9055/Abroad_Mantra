@@ -35,7 +35,7 @@ const AboutSection = () => {
             <ScrollReveal key={service.title} delay={i * 0.1} direction="scale">
               <Link
                 to={service.path}
-                className="group flex flex-col items-center text-center p-6 bg-card rounded-2xl border border-border hover:border-primary/30 hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+                className="group flex flex-col items-center text-center p-6 rounded-2xl glass-card gradient-border hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
               >
                 <div className={`w-16 h-16 rounded-xl ${service.color.split(" ")[0]} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
                   <service.icon className={`h-7 w-7 ${service.color.split(" ")[1]}`} />

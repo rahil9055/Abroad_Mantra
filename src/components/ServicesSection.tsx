@@ -36,7 +36,7 @@ const ServicesSection = () => {
             <ScrollReveal key={service.title} delay={i * 0.08} direction={i % 2 === 0 ? "left" : "right"}>
               <Link
                 to={service.path}
-                className="group p-6 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 block"
+                className="group p-6 rounded-xl glass-card gradient-border hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 block"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                   <service.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />

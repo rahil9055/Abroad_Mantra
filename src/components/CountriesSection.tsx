@@ -32,7 +32,7 @@ const CountriesSection = () => {
             <ScrollReveal key={country.name} delay={i * 0.12} direction="up">
               <Link
                 to={country.path}
-                className={`group relative p-8 bg-card rounded-2xl border border-border hover:border-primary/30 text-center hover:shadow-2xl ${country.accent} hover:-translate-y-3 transition-all duration-500 overflow-hidden block`}
+                className={`group relative p-8 rounded-2xl glass-card gradient-border text-center hover:shadow-2xl ${country.accent} hover:-translate-y-3 transition-all duration-500 overflow-hidden block`}
               >
                 {/* Animated gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
