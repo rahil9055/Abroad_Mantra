@@ -21,7 +21,12 @@ import UK from "./pages/countries/UK.tsx";
 import Australia from "./pages/countries/Australia.tsx";
 import Canada from "./pages/countries/Canada.tsx";
 import USA from "./pages/countries/USA.tsx";
-
+import FAQs from "./pages/FAQs.tsx";
+import Testimonials from "./pages/Testimonials.tsx";
+import Blog from "./pages/Blog.tsx";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy.tsx";
+import Terms from "./pages/legal/Terms.tsx";
+import RefundPolicy from "./pages/legal/RefundPolicy.tsx";
 const queryClient = new QueryClient();
 
 const PageWrapper = ({ title }: { title: string }) => (
