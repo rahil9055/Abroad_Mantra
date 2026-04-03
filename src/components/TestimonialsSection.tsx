@@ -115,10 +115,10 @@ const TestimonialsSection = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 tracking-wide">
               ⭐ Student Stories
             </span>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-navy-foreground mb-4">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
               Trusted by <span className="text-primary">Thousands</span> of Students
             </h2>
-            <p className="text-navy-foreground/60 text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Real experiences from students who achieved their dreams with Abroad Mantra
             </p>
           </div>
