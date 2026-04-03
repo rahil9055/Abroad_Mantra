@@ -28,7 +28,7 @@ const navItems = [
       { label: "USA", path: "/countries/usa" },
     ],
   },
-  { label: "Testimonials", path: "/testimonials" },
+  
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
