@@ -511,6 +511,7 @@ Part-time work abroad is a fantastic way to support yourself financially while g
     author: "Priya Patel",
     metaTitle: "How to Write a Winning SOP for Study Abroad | AbroadMantra",
     metaDescription: "Learn how to write a compelling Statement of Purpose (SOP) for university applications. Structure, examples, dos and don'ts from experts who've helped 1000+ students.",
+    image: sopImg,
     content: `
 ## Introduction
 
