@@ -405,6 +405,7 @@ Living in the UK as an international student is manageable with proper budgeting
     author: "Rahul Sharma",
     metaTitle: "Part-Time Jobs for International Students Abroad | AbroadMantra",
     metaDescription: "Complete guide to finding part-time jobs while studying in UK, Canada, Australia & USA. Work rights, best job types, earning potential & tips for balancing work and study.",
+    image: scholarshipsImg,
     content: `
 ## Introduction
 
