@@ -57,13 +57,9 @@ const CountriesSection = () => {
                 to={country.path}
                 className="group block rounded-2xl border border-border border-dashed bg-card p-8 text-center hover:shadow-2xl hover:border-primary/30 hover:border-solid hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
               >
-                {/* Animated flag */}
-                <div className="w-20 h-20 mx-auto mb-4 relative">
-                  <LottieAnimation url={country.lottie} className="w-full h-full" />
-                  {/* Fallback flag emoji overlay if Lottie fails to load */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-0">
-                    <span className="text-4xl">{country.flag}</span>
-                  </div>
+                {/* Flag emoji */}
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-6xl group-hover:scale-110 transition-transform duration-300">{country.flag}</span>
                 </div>
 
                 {/* Country code */}
