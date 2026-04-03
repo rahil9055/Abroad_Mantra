@@ -16,10 +16,10 @@ const CTASection = () => {
             <div className="absolute top-1/2 right-10 w-20 h-20 border border-primary/10 rounded-full animate-spin-slow" />
 
             <div className="relative z-10">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy-foreground mb-4">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Ready to Start Your Journey Abroad?
               </h2>
-              <p className="text-navy-foreground/70 text-lg mb-8 max-w-xl mx-auto">
+              <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
                 Book a free consultation with our experts today and take the first step towards your dream career.
               </p>
               <Link
