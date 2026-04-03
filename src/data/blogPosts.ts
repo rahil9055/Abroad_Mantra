@@ -1,3 +1,10 @@
+import choosingCountryImg from "@/assets/blog/choosing-country.jpg";
+import visaMistakesImg from "@/assets/blog/visa-mistakes.jpg";
+import ieltsImg from "@/assets/blog/ielts-prep.jpg";
+import ukCostImg from "@/assets/blog/uk-cost.jpg";
+import scholarshipsImg from "@/assets/blog/scholarships.jpg";
+import sopImg from "@/assets/blog/sop-writing.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -9,6 +16,7 @@ export interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   content: string;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
