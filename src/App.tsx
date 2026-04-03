@@ -10,6 +10,12 @@ import NotFound from "./pages/NotFound.tsx";
 import PlaceholderPage from "./components/PlaceholderPage.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from "./components/Footer.tsx";
+import VisaAssistance from "./pages/services/VisaAssistance.tsx";
+import Consultation from "./pages/services/Consultation.tsx";
+import Remonstration from "./pages/services/Remonstration.tsx";
+import Jobs from "./pages/services/Jobs.tsx";
+import Accommodation from "./pages/services/Accommodation.tsx";
+import Tutoring from "./pages/services/Tutoring.tsx";
 
 const queryClient = new QueryClient();
 
