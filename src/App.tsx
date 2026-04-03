@@ -48,10 +48,10 @@ const App = () => (
           <Route path="/services/accommodation" element={<Accommodation />} />
           <Route path="/services/tutoring" element={<Tutoring />} />
           <Route path="/countries" element={<PageWrapper title="Study Destinations" />} />
-          <Route path="/countries/uk" element={<PageWrapper title="Study in United Kingdom" />} />
-          <Route path="/countries/australia" element={<PageWrapper title="Study in Australia" />} />
-          <Route path="/countries/canada" element={<PageWrapper title="Study in Canada" />} />
-          <Route path="/countries/usa" element={<PageWrapper title="Study in USA" />} />
+          <Route path="/countries/uk" element={<UK />} />
+          <Route path="/countries/australia" element={<Australia />} />
+          <Route path="/countries/canada" element={<Canada />} />
+          <Route path="/countries/usa" element={<USA />} />
           <Route path="/testimonials" element={<PageWrapper title="Testimonials" />} />
           <Route path="/blog" element={<PageWrapper title="Blog" />} />
           <Route path="/faqs" element={<PageWrapper title="FAQs" />} />
