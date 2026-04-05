@@ -25,7 +25,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
-import heroImg from "@/assets/remonstration-hero.jpg";
+import heroImg from "@/assets/remonstration-hero.png";
 import successImg from "@/assets/remonstration-success.jpg";
 import { useState } from "react";
 
