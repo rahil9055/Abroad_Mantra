@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Calendar, Clock, User, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock, User, ChevronRight, Share2, BookOpen } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -39,6 +39,14 @@ const BlogPostPage = () => {
     mainEntityOfPage: `https://abroadmantra.com/blog/${post.slug}`,
   };
 
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({ title: post.title, url: window.location.href });
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -49,56 +57,67 @@ const BlogPostPage = () => {
       />
       <Navbar />
 
-      {/* Hero with featured image */}
-      <section className="relative pt-24 pb-0 overflow-hidden">
-        {/* Featured Image */}
-        <div className="relative h-[300px] md:h-[420px] w-full">
+      {/* Hero */}
+      <section className="relative pt-20">
+        <div className="relative h-[340px] md:h-[480px] w-full overflow-hidden">
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-black/20" />
         </div>
 
-        {/* Overlapping content card */}
-        <div className="container mx-auto px-4 relative z-10 -mt-40 md:-mt-48">
-          <div className="max-w-3xl mx-auto">
+        <div className="container mx-auto px-4 relative z-10 -mt-52 md:-mt-64">
+          <div className="max-w-4xl mx-auto">
             <ScrollReveal>
               {/* Breadcrumb */}
-              <nav className="flex items-center gap-1.5 text-xs text-muted-foreground mb-5">
-                <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+              <nav className="flex items-center gap-1.5 text-xs text-white/70 mb-6 backdrop-blur-sm bg-black/10 rounded-full px-4 py-2 w-fit">
+                <Link to="/" className="hover:text-white transition-colors">Home</Link>
                 <ChevronRight className="h-3 w-3" />
-                <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+                <Link to="/blog" className="hover:text-white transition-colors">Blog</Link>
                 <ChevronRight className="h-3 w-3" />
-                <span className="text-foreground font-medium truncate max-w-[200px]">{post.title}</span>
+                <span className="text-white font-medium truncate max-w-[200px]">{post.category}</span>
               </nav>
 
-              <div className="bg-card border border-border rounded-2xl p-6 md:p-10 shadow-lg">
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">
-                  {post.category}
-                </span>
-                <h1 className="font-heading text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground leading-tight tracking-tight">
+              <div className="bg-card/95 backdrop-blur-xl border border-border/50 rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase tracking-wider">
+                    {post.category}
+                  </span>
+                  <span className="text-xs text-muted-foreground flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" /> {post.readTime}
+                  </span>
+                </div>
+
+                <h1 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground leading-[1.15] tracking-tight">
                   {post.title}
                 </h1>
-                <p className="text-muted-foreground mt-3 text-base leading-relaxed">
+                <p className="text-muted-foreground mt-4 text-base md:text-lg leading-relaxed max-w-3xl">
                   {post.excerpt}
                 </p>
 
                 {/* Author bar */}
-                <div className="flex flex-wrap items-center gap-5 mt-6 pt-5 border-t border-border">
+                <div className="flex flex-wrap items-center gap-5 mt-8 pt-6 border-t border-border/50">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <User className="h-5 w-5 text-primary" />
+                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center shadow-md">
+                      <User className="h-5 w-5 text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">{post.author}</p>
+                      <p className="text-sm font-bold text-foreground">{post.author}</p>
                       <p className="text-xs text-muted-foreground">AbroadMantra Expert</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground ml-auto">
-                    <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" />{post.date}</span>
-                    <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" />{post.readTime}</span>
+                  <div className="flex items-center gap-4 ml-auto">
+                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <Calendar className="h-3.5 w-3.5" />{post.date}
+                    </span>
+                    <button
+                      onClick={handleShare}
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-full border border-border hover:border-primary/30"
+                    >
+                      <Share2 className="h-3.5 w-3.5" /> Share
+                    </button>
                   </div>
                 </div>
               </div>
@@ -108,24 +127,35 @@ const BlogPostPage = () => {
       </section>
 
       {/* Article content */}
-      <section className="py-12 md:py-16 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <article className="prose prose-lg dark:prose-invert max-w-none
+          <div className="max-w-4xl mx-auto">
+            {/* Table of contents sidebar hint */}
+            <div className="flex items-center gap-2 text-xs text-muted-foreground mb-10 pb-6 border-b border-border/50">
+              <BookOpen className="h-4 w-4 text-primary" />
+              <span className="font-medium">Comprehensive guide</span>
+              <span className="mx-1">•</span>
+              <span>{post.readTime}</span>
+              <span className="mx-1">•</span>
+              <span>By {post.author}</span>
+            </div>
+
+            <article className="
+              prose prose-lg dark:prose-invert max-w-none
               prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight
-              prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-5 prose-h2:pb-3 prose-h2:border-b prose-h2:border-border
-              prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-3
-              prose-p:text-muted-foreground prose-p:leading-[1.85] prose-p:text-[15.5px] prose-p:mb-5
-              prose-li:text-muted-foreground prose-li:leading-[1.8] prose-li:text-[15.5px]
-              prose-ul:my-4 prose-ol:my-4
-              prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-foreground prose-strong:font-semibold
-              prose-th:text-foreground prose-th:font-semibold prose-th:text-sm prose-th:py-3 prose-th:px-4 prose-th:bg-secondary/50 prose-th:text-left
-              prose-td:text-muted-foreground prose-td:text-sm prose-td:py-3 prose-td:px-4
-              prose-table:border prose-table:border-border prose-table:rounded-xl prose-table:overflow-hidden prose-table:shadow-sm
-              prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-5 prose-blockquote:rounded-r-xl prose-blockquote:not-italic
-              prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
-              prose-img:rounded-2xl prose-img:shadow-md
+              prose-h2:text-[1.65rem] prose-h2:md:text-[1.85rem] prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-4 prose-h2:border-b prose-h2:border-border/40 prose-h2:font-extrabold
+              prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-bold
+              prose-p:text-muted-foreground prose-p:leading-[1.9] prose-p:text-[16px] prose-p:mb-5
+              prose-li:text-muted-foreground prose-li:leading-[1.85] prose-li:text-[16px] prose-li:marker:text-primary
+              prose-ul:my-5 prose-ol:my-5 prose-ul:pl-4 prose-ol:pl-4
+              prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:underline prose-a:transition-colors
+              prose-strong:text-foreground prose-strong:font-bold
+              prose-th:text-foreground prose-th:font-bold prose-th:text-sm prose-th:py-3.5 prose-th:px-5 prose-th:bg-primary/5 prose-th:text-left prose-th:border-b-2 prose-th:border-primary/20
+              prose-td:text-muted-foreground prose-td:text-sm prose-td:py-3.5 prose-td:px-5 prose-td:border-b prose-td:border-border/30
+              prose-table:border prose-table:border-border/40 prose-table:rounded-2xl prose-table:overflow-hidden prose-table:shadow-sm prose-table:my-8
+              prose-blockquote:border-l-4 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-2xl prose-blockquote:not-italic prose-blockquote:my-8
+              prose-code:text-primary prose-code:bg-primary/10 prose-code:px-2 prose-code:py-1 prose-code:rounded-md prose-code:text-sm prose-code:font-normal
+              prose-img:rounded-2xl prose-img:shadow-lg
             ">
               <ReactMarkdown
                 components={{
@@ -134,68 +164,93 @@ const BlogPostPage = () => {
                       ? blogImageMap[src.replace("blog:", "")]
                       : src;
                     return (
-                      <figure className="my-8">
-                        <img
-                          src={resolvedSrc}
-                          alt={alt || ""}
-                          className="w-full rounded-2xl shadow-md"
-                          loading="lazy"
-                          width={1200}
-                          height={672}
-                          {...props}
-                        />
+                      <figure className="my-10 group">
+                        <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-border/20">
+                          <img
+                            src={resolvedSrc}
+                            alt={alt || ""}
+                            className="w-full aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+                        </div>
                         {alt && (
-                          <figcaption className="text-center text-xs text-muted-foreground mt-3 italic">
+                          <figcaption className="text-center text-xs text-muted-foreground mt-3 italic opacity-80">
                             {alt}
                           </figcaption>
                         )}
                       </figure>
                     );
                   },
+                  table: ({ children, ...props }) => (
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-border/40 shadow-sm">
+                      <table className="w-full" {...props}>{children}</table>
+                    </div>
+                  ),
+                  thead: ({ children, ...props }) => (
+                    <thead className="bg-primary/5" {...props}>{children}</thead>
+                  ),
+                  tr: ({ children, ...props }) => (
+                    <tr className="border-b border-border/20 last:border-b-0 hover:bg-muted/30 transition-colors" {...props}>{children}</tr>
+                  ),
                 } as Components}
               >
                 {post.content}
               </ReactMarkdown>
             </article>
 
-            {/* Tags / Category */}
-            <div className="mt-12 flex flex-wrap items-center gap-2">
-              <span className="text-xs text-muted-foreground font-medium">Tags:</span>
-              <span className="px-3 py-1 bg-secondary text-foreground text-xs rounded-full">{post.category}</span>
-              <span className="px-3 py-1 bg-secondary text-foreground text-xs rounded-full">Study Abroad</span>
-              <span className="px-3 py-1 bg-secondary text-foreground text-xs rounded-full">International Students</span>
+            {/* Tags */}
+            <div className="mt-14 pt-8 border-t border-border/40 flex flex-wrap items-center gap-3">
+              <span className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">Tags:</span>
+              {[post.category, "Study Abroad", "International Students"].map((tag) => (
+                <span key={tag} className="px-4 py-1.5 bg-secondary/80 text-foreground text-xs rounded-full font-medium hover:bg-primary/10 hover:text-primary transition-colors cursor-default">
+                  {tag}
+                </span>
+              ))}
             </div>
 
-            {/* Prev / Next navigation */}
+            {/* Prev / Next */}
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
               {prevPost ? (
-                <Link to={`/blog/${prevPost.slug}`} className="group flex items-start gap-3 p-5 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all">
-                  <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-primary mt-0.5 shrink-0 transition-colors" />
+                <Link to={`/blog/${prevPost.slug}`} className="group flex items-center gap-4 p-6 rounded-2xl border border-border/50 bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
+                    <ArrowLeft className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
                   <div>
-                    <span className="text-xs text-muted-foreground">Previous</span>
-                    <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mt-0.5">{prevPost.title}</p>
+                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Previous</span>
+                    <p className="text-sm font-bold text-foreground group-hover:text-primary transition-colors leading-snug mt-0.5 line-clamp-2">{prevPost.title}</p>
                   </div>
                 </Link>
               ) : <div />}
               {nextPost ? (
-                <Link to={`/blog/${nextPost.slug}`} className="group flex items-start gap-3 p-5 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all text-right md:ml-auto">
-                  <div>
-                    <span className="text-xs text-muted-foreground">Next</span>
-                    <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mt-0.5">{nextPost.title}</p>
+                <Link to={`/blog/${nextPost.slug}`} className="group flex items-center gap-4 p-6 rounded-2xl border border-border/50 bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 md:flex-row-reverse md:text-right">
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
+                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary mt-0.5 shrink-0 transition-colors" />
+                  <div>
+                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Next</span>
+                    <p className="text-sm font-bold text-foreground group-hover:text-primary transition-colors leading-snug mt-0.5 line-clamp-2">{nextPost.title}</p>
+                  </div>
                 </Link>
               ) : <div />}
             </div>
 
             {/* CTA */}
-            <div className="mt-14">
-              <div className="relative bg-primary rounded-2xl p-8 md:p-10 text-center overflow-hidden">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-primary-foreground/5 rounded-full blur-3xl" />
+            <div className="mt-16">
+              <div className="relative bg-gradient-to-br from-primary via-primary to-primary/80 rounded-3xl p-10 md:p-14 text-center overflow-hidden">
+                <div className="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
                 <div className="relative z-10">
-                  <h3 className="font-heading text-xl md:text-2xl font-bold text-primary-foreground mb-2">Need Expert Guidance?</h3>
-                  <p className="text-primary-foreground/80 text-sm mb-6 max-w-md mx-auto">Get personalized advice from our consultants — your first consultation is completely free.</p>
-                  <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-background text-primary rounded-xl font-semibold text-sm hover:scale-105 hover:shadow-xl transition-all duration-300">
+                  <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-primary-foreground mb-3">
+                    Need Expert Guidance?
+                  </h3>
+                  <p className="text-primary-foreground/80 text-sm md:text-base mb-8 max-w-md mx-auto leading-relaxed">
+                    Get personalized advice from our consultants — your first consultation is completely free.
+                  </p>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-background text-primary rounded-2xl font-bold text-sm hover:scale-105 hover:shadow-2xl transition-all duration-300"
+                  >
                     Book Free Consultation <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -206,35 +261,40 @@ const BlogPostPage = () => {
       </section>
 
       {/* Related Posts */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-8 text-center">
-              Related <span className="text-primary">Articles</span>
-            </h2>
+            <div className="text-center mb-12">
+              <span className="text-xs uppercase tracking-[0.2em] text-primary font-bold">Keep Reading</span>
+              <h2 className="font-heading text-3xl font-extrabold text-foreground mt-2">
+                Related <span className="text-primary">Articles</span>
+              </h2>
+            </div>
           </ScrollReveal>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {relatedFill.map((r, i) => (
-              <ScrollReveal key={r.slug} delay={i * 0.1} direction="up">
+              <ScrollReveal key={r.slug} delay={i * 0.12} direction="up">
                 <Link to={`/blog/${r.slug}`} className="group block h-full">
-                  <article className="rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                    <div className="relative h-36 overflow-hidden">
+                  <article className="rounded-3xl border border-border/50 bg-card overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+                    <div className="relative h-44 overflow-hidden">
                       <img
                         src={r.image}
                         alt={r.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                      <span className="absolute top-3 left-3 px-2.5 py-0.5 bg-primary/10 text-primary text-xs font-semibold rounded-full backdrop-blur-sm">{r.category}</span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 text-primary text-xs font-bold rounded-full">
+                        {r.category}
+                      </span>
                     </div>
-                    <div className="p-5 flex flex-col flex-1">
-                      <h3 className="font-heading text-sm font-bold text-foreground group-hover:text-primary transition-colors leading-snug mb-2 tracking-tight">
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-heading text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug mb-3 tracking-tight">
                         {r.title}
                       </h3>
-                      <p className="text-muted-foreground text-xs leading-relaxed flex-1 line-clamp-2">{r.excerpt}</p>
-                      <div className="flex items-center gap-1.5 text-primary text-xs font-medium mt-3">
-                        Read more <ArrowRight className="h-3 w-3" />
+                      <p className="text-muted-foreground text-sm leading-relaxed flex-1 line-clamp-2">{r.excerpt}</p>
+                      <div className="flex items-center gap-2 text-primary text-sm font-bold mt-4 group-hover:gap-3 transition-all">
+                        Read more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
                   </article>
