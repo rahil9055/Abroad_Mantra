@@ -1,17 +1,30 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowRight, User } from "lucide-react";
+import { Calendar, Clock, ArrowRight, User, Search, BookOpen, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
-
 import { blogPosts } from "@/data/blogPosts";
-
-const posts = blogPosts;
 
 const categories = ["All", "Guides", "Visa Tips", "Test Prep", "Living Abroad", "Career", "Applications"];
 
 const Blog = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filtered = blogPosts.filter((post) => {
+    const matchesCategory = activeCategory === "All" || post.category === activeCategory;
+    const matchesSearch =
+      !searchQuery ||
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const featured = blogPosts[0];
+  const rest = filtered.filter((p) => p.slug !== featured.slug || activeCategory !== "All");
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -21,32 +34,51 @@ const Blog = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative hero-gradient pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-20 right-1/4 w-[300px] h-[300px] bg-primary/8 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-10 left-10 w-[200px] h-[200px] bg-accent/8 rounded-full blur-3xl animate-blob" style={{ animationDelay: "-4s" }} />
+      <section className="relative pt-28 pb-16 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
+        <div className="absolute top-16 right-1/4 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 left-10 w-[250px] h-[250px] bg-accent/6 rounded-full blur-[80px]" />
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Blog</span>
-              <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-foreground mt-3 leading-tight">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-xs font-bold uppercase tracking-[0.15em] mb-5">
+                <BookOpen className="h-3.5 w-3.5" /> Our Blog
+              </div>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight">
                 Study Abroad <span className="text-primary">Insights</span>
               </h1>
-              <p className="text-muted-foreground text-lg mt-5 leading-relaxed">
-                Expert tips, guides, and news to help you prepare for your international education journey.
+              <p className="text-muted-foreground text-lg md:text-xl mt-5 leading-relaxed max-w-2xl mx-auto">
+                Expert tips, in-depth guides, and real stories to prepare you for your international education journey.
               </p>
+
+              {/* Search */}
+              <div className="mt-8 max-w-lg mx-auto relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-5 py-4 rounded-2xl bg-card border border-border/50 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all shadow-sm text-sm"
+                />
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Category Pills */}
-      <section className="bg-card border-b border-border">
+      <section className="sticky top-16 z-30 bg-background/80 backdrop-blur-xl border-b border-border/40">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex gap-2 overflow-x-auto pb-1">
+          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
             {categories.map((cat) => (
               <button
                 key={cat}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${cat === "All" ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground hover:bg-primary/10"}`}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
+                  cat === activeCategory
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
+                    : "bg-secondary/60 text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                }`}
               >
                 {cat}
               </button>
@@ -55,57 +87,156 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Blog Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post, i) => (
-              <ScrollReveal key={post.slug} delay={i * 0.08} direction="up">
-              <Link to={`/blog/${post.slug}`} className="block h-full">
-                <article className="glass-card gradient-border rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
-                  <div className="relative h-44 overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      width={800}
-                      height={512}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <span className="absolute top-3 left-3 px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full backdrop-blur-sm">{post.category}</span>
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h2 className="font-heading text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug tracking-tight">
-                      {post.title}
-                    </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-3">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground/70 pt-3 border-t border-border">
-                      <div className="flex items-center gap-3">
-                        <span className="flex items-center gap-1.5"><User className="h-3 w-3" />{post.author}</span>
-                        <span className="flex items-center gap-1.5"><Calendar className="h-3 w-3" />{post.date}</span>
+      {/* Featured Post */}
+      {activeCategory === "All" && !searchQuery && (
+        <section className="py-14 bg-background">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <Link to={`/blog/${featured.slug}`} className="group block">
+                <article className="relative rounded-3xl overflow-hidden bg-card border border-border/40 shadow-sm hover:shadow-xl transition-all duration-500">
+                  <div className="grid md:grid-cols-2 gap-0">
+                    <div className="relative h-64 md:h-[420px] overflow-hidden">
+                      <img
+                        src={featured.image}
+                        alt={featured.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20 md:block hidden" />
+                      <div className="absolute top-5 left-5 flex items-center gap-2">
+                        <span className="px-3 py-1.5 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center gap-1.5">
+                          <TrendingUp className="h-3 w-3" /> Featured
+                        </span>
+                        <span className="px-3 py-1.5 bg-white/90 text-primary text-xs font-bold rounded-full">
+                          {featured.category}
+                        </span>
                       </div>
-                      <span className="flex items-center gap-1.5"><Clock className="h-3 w-3" />{post.readTime}</span>
+                    </div>
+                    <div className="p-8 md:p-12 flex flex-col justify-center">
+                      <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground group-hover:text-primary transition-colors leading-tight tracking-tight">
+                        {featured.title}
+                      </h2>
+                      <p className="text-muted-foreground text-base md:text-lg mt-4 leading-relaxed line-clamp-3">
+                        {featured.excerpt}
+                      </p>
+                      <div className="flex items-center gap-5 mt-6 pt-5 border-t border-border/40">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
+                            <User className="h-4 w-4 text-primary" />
+                          </div>
+                          <span className="text-sm font-semibold text-foreground">{featured.author}</span>
+                        </div>
+                        <span className="text-xs text-muted-foreground flex items-center gap-1.5">
+                          <Calendar className="h-3.5 w-3.5" /> {featured.date}
+                        </span>
+                        <span className="text-xs text-muted-foreground flex items-center gap-1.5">
+                          <Clock className="h-3.5 w-3.5" /> {featured.readTime}
+                        </span>
+                      </div>
+                      <div className="mt-6">
+                        <span className="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">
+                          Read Full Article <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </article>
               </Link>
-              </ScrollReveal>
-            ))}
+            </ScrollReveal>
           </div>
+        </section>
+      )}
+
+      {/* Blog Grid */}
+      <section className="py-14 bg-background">
+        <div className="container mx-auto px-4">
+          {activeCategory === "All" && !searchQuery && (
+            <ScrollReveal>
+              <div className="flex items-center gap-3 mb-10">
+                <div className="h-px flex-1 bg-border/40" />
+                <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">Latest Articles</span>
+                <div className="h-px flex-1 bg-border/40" />
+              </div>
+            </ScrollReveal>
+          )}
+
+          {filtered.length === 0 ? (
+            <div className="text-center py-20">
+              <Search className="h-12 w-12 text-muted-foreground/30 mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold text-foreground mb-2">No articles found</h3>
+              <p className="text-muted-foreground text-sm">Try a different search term or category.</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {(activeCategory === "All" && !searchQuery ? rest : filtered).map((post, i) => (
+                <ScrollReveal key={post.slug} delay={i * 0.08} direction="up">
+                  <Link to={`/blog/${post.slug}`} className="block h-full group">
+                    <article className="rounded-3xl overflow-hidden bg-card border border-border/40 hover:-translate-y-2 hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+                      <div className="relative h-52 overflow-hidden">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                        <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/90 text-primary text-xs font-bold rounded-full">
+                          {post.category}
+                        </span>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <span className="text-white/80 text-xs flex items-center gap-1.5">
+                            <Clock className="h-3 w-3" /> {post.readTime}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-6 flex flex-col flex-1">
+                        <h2 className="font-heading text-lg font-extrabold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug tracking-tight line-clamp-2">
+                          {post.title}
+                        </h2>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-1 line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between pt-4 border-t border-border/30">
+                          <div className="flex items-center gap-2.5">
+                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                              <User className="h-3.5 w-3.5 text-primary" />
+                            </div>
+                            <div>
+                              <p className="text-xs font-bold text-foreground">{post.author}</p>
+                              <p className="text-[10px] text-muted-foreground">{post.date}</p>
+                            </div>
+                          </div>
+                          <span className="flex items-center gap-1.5 text-primary text-xs font-bold group-hover:gap-2.5 transition-all">
+                            Read <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <ScrollReveal direction="scale">
-            <div className="bg-primary rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/5 rounded-full blur-3xl animate-blob" />
+            <div className="relative bg-gradient-to-br from-primary via-primary to-primary/80 rounded-3xl p-12 md:p-16 text-center overflow-hidden max-w-5xl mx-auto">
+              <div className="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
               <div className="relative z-10">
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Ready to Start Your Journey?</h2>
-                <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">Get personalized guidance from our experts. Your first consultation is free!</p>
-                <Link to="/contact" className="group inline-flex items-center gap-2 px-8 py-4 bg-background text-primary rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+                <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">
+                  Ready to Start Your Journey?
+                </h2>
+                <p className="text-primary-foreground/80 text-base md:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+                  Get personalized guidance from our experts. Your first consultation is free!
+                </p>
+                <Link
+                  to="/contact"
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-background text-primary rounded-2xl font-bold text-base hover:scale-105 hover:shadow-2xl transition-all duration-300"
+                >
                   Book Free Consultation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
