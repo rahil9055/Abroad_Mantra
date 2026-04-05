@@ -23,7 +23,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
-import heroImg from "@/assets/tutoring-hero.jpg";
+import heroImg from "@/assets/tutoring-hero.png";
 import onlineImg from "@/assets/tutoring-online.jpg";
 import { useState } from "react";
 
