@@ -120,6 +120,8 @@ There's no single "best" country — the right choice depends on your goals, bud
 
 A student visa refusal can delay your plans by months or even years. Whether you're applying for a **UK Tier 4**, **Canadian Study Permit**, **Australian Student Visa (subclass 500)**, or **US F-1 Visa**, these proven tips will significantly improve your chances of approval.
 
+![Visa application process at immigration office](blog:visa-application-process)
+
 ## The Top 10 Tips
 
 ### 1. Apply Early
@@ -140,6 +142,8 @@ Missing documents are the #1 reason for delays and refusals. Essential documents
 - Proof of English proficiency (IELTS/TOEFL/PTE)
 - Academic transcripts and certificates
 - Financial documents
+
+![Travel documents and passport ready for visa application](blog:travel-documents)
 
 ### 3. Show Strong Financial Proof
 
