@@ -49,7 +49,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<PageWrapper title="Our Services" />} />
+          
           <Route path="/services/visa" element={<VisaAssistance />} />
           <Route path="/services/consultation" element={<Consultation />} />
           <Route path="/services/remonstration" element={<Remonstration />} />
