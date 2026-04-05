@@ -38,6 +38,8 @@ Choosing the right country for your higher education is one of the most importan
 
 At **AbroadMantra**, we've helped thousands of students navigate this decision. This guide breaks down everything you need to consider.
 
+![Students comparing study destinations on a world map](blog:choosing-country-comparison)
+
 ## Key Factors to Consider
 
 ### 1. Tuition Fees & Budget
@@ -68,6 +70,8 @@ All four countries host world-renowned universities. Consider global rankings, b
 - **Industry connections** and internship opportunities
 - **Research output** if you're considering a research-focused program
 
+![Beautiful university campus with students](blog:university-campus)
+
 ### 4. Living Environment & Culture
 
 - **UK**: Rich history, multicultural cities, mild climate, excellent public transport
@@ -90,6 +94,8 @@ If you plan to settle abroad permanently, consider the immigration-friendliness:
 2. **Research specific programs**, not just countries
 3. **Talk to alumni** from your target universities
 4. **Consult experts** — at AbroadMantra, we provide free initial consultations to help you decide
+
+![Graduation celebration - international students](blog:graduation-success)
 
 ## Conclusion
 
