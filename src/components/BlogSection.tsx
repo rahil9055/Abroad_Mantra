@@ -50,13 +50,13 @@ const BlogSection = () => {
                     </span>
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <h3 className="font-heading text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
+                    <h3 className="font-heading text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug tracking-tight">
                       {post.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-border">
-                      <span className="flex items-center gap-1"><User className="h-3 w-3" />{post.author}</span>
-                      <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-3">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-xs text-muted-foreground/70 pt-3 border-t border-border">
+                      <span className="flex items-center gap-1.5"><User className="h-3 w-3" />{post.author}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="h-3 w-3" />{post.readTime}</span>
                     </div>
                   </div>
                 </article>
