@@ -5,7 +5,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getBlogPost, blogPosts } from "@/data/blogPosts";
+import { blogImageMap } from "@/data/blogImages";
 import ReactMarkdown from "react-markdown";
+import type { Components } from "react-markdown";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
