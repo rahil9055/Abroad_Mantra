@@ -231,6 +231,8 @@ The **International English Language Testing System (IELTS)** is the most widely
 
 This guide covers everything you need to score **7+ bands** across all four sections.
 
+![Student preparing for IELTS exam with study materials](blog:ielts-study-session)
+
 ## Understanding the IELTS Format
 
 IELTS Academic has four sections:
@@ -275,6 +277,8 @@ Your **Overall Band Score** is the average of all four sections, rounded to the 
 - Support arguments with examples and reasoning
 - Vary sentence structures (simple, compound, complex)
 - Practice the most common essay types: opinion, discussion, problem-solution, advantages/disadvantages
+
+![University campus where you'll study after passing IELTS](blog:university-campus)
 
 ### Speaking (Target: 7.0+)
 
