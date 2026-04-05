@@ -431,6 +431,8 @@ Living in the UK as an international student is manageable with proper budgeting
 
 Working part-time while studying abroad helps you **earn money, gain experience, and build your resume**. But each country has different rules about how many hours you can work. This guide covers everything you need to know about part-time work in the UK, Canada, Australia, and USA.
 
+![Student working part-time at a cafe](blog:part-time-work)
+
 ## Work Rights by Country
 
 ### United Kingdom
@@ -479,6 +481,8 @@ Working part-time while studying abroad helps you **earn money, gain experience,
 - Teaching assistant positions
 - Lab technician roles
 - Part-time roles at startups
+
+![Professional job interview preparation](blog:job-interview)
 
 ## Where to Find Jobs
 
