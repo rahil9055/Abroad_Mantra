@@ -66,12 +66,37 @@ const BlogPostPage = () => {
       </section>
 
       {/* Content */}
-      <section className="py-16 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-th:text-foreground prose-td:text-muted-foreground">
+            <article className="prose prose-lg dark:prose-invert max-w-none
+              prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight
+              prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-border
+              prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+              prose-p:text-muted-foreground prose-p:leading-[1.8] prose-p:text-[16px]
+              prose-li:text-muted-foreground prose-li:leading-[1.8] prose-li:text-[16px]
+              prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+              prose-strong:text-foreground prose-strong:font-semibold
+              prose-th:text-foreground prose-th:font-semibold prose-th:text-sm prose-th:py-3 prose-th:px-4 prose-th:bg-secondary/50
+              prose-td:text-muted-foreground prose-td:text-sm prose-td:py-2.5 prose-td:px-4
+              prose-table:border prose-table:border-border prose-table:rounded-lg prose-table:overflow-hidden
+              prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-1 prose-blockquote:rounded-r-lg
+              prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+              prose-img:rounded-xl prose-img:shadow-md
+            ">
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </article>
+
+            {/* Share & CTA */}
+            <div className="mt-16 pt-8 border-t border-border">
+              <div className="bg-primary/5 rounded-2xl p-8 text-center">
+                <h3 className="font-heading text-xl font-bold text-foreground mb-2">Found this helpful?</h3>
+                <p className="text-muted-foreground text-sm mb-5">Get personalized guidance from our experts — your first consultation is free.</p>
+                <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition-all text-sm">
+                  Book Free Consultation <ArrowLeft className="h-4 w-4 rotate-180" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

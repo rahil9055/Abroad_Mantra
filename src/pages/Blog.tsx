@@ -76,16 +76,16 @@ const Blog = () => {
                     <span className="absolute top-3 left-3 px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full backdrop-blur-sm">{post.category}</span>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <h2 className="font-heading text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
+                    <h2 className="font-heading text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug tracking-tight">
                       {post.title}
                     </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-border">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-3">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-xs text-muted-foreground/70 pt-3 border-t border-border">
                       <div className="flex items-center gap-3">
-                        <span className="flex items-center gap-1"><User className="h-3 w-3" />{post.author}</span>
-                        <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{post.date}</span>
+                        <span className="flex items-center gap-1.5"><User className="h-3 w-3" />{post.author}</span>
+                        <span className="flex items-center gap-1.5"><Calendar className="h-3 w-3" />{post.date}</span>
                       </div>
-                      <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="h-3 w-3" />{post.readTime}</span>
                     </div>
                   </div>
                 </article>
