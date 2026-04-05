@@ -38,6 +38,8 @@ Choosing the right country for your higher education is one of the most importan
 
 At **AbroadMantra**, we've helped thousands of students navigate this decision. This guide breaks down everything you need to consider.
 
+![Students comparing study destinations on a world map](blog:choosing-country-comparison)
+
 ## Key Factors to Consider
 
 ### 1. Tuition Fees & Budget
@@ -68,6 +70,8 @@ All four countries host world-renowned universities. Consider global rankings, b
 - **Industry connections** and internship opportunities
 - **Research output** if you're considering a research-focused program
 
+![Beautiful university campus with students](blog:university-campus)
+
 ### 4. Living Environment & Culture
 
 - **UK**: Rich history, multicultural cities, mild climate, excellent public transport
@@ -90,6 +94,8 @@ If you plan to settle abroad permanently, consider the immigration-friendliness:
 2. **Research specific programs**, not just countries
 3. **Talk to alumni** from your target universities
 4. **Consult experts** — at AbroadMantra, we provide free initial consultations to help you decide
+
+![Graduation celebration - international students](blog:graduation-success)
 
 ## Conclusion
 
@@ -114,6 +120,8 @@ There's no single "best" country — the right choice depends on your goals, bud
 
 A student visa refusal can delay your plans by months or even years. Whether you're applying for a **UK Tier 4**, **Canadian Study Permit**, **Australian Student Visa (subclass 500)**, or **US F-1 Visa**, these proven tips will significantly improve your chances of approval.
 
+![Visa application process at immigration office](blog:visa-application-process)
+
 ## The Top 10 Tips
 
 ### 1. Apply Early
@@ -134,6 +142,8 @@ Missing documents are the #1 reason for delays and refusals. Essential documents
 - Proof of English proficiency (IELTS/TOEFL/PTE)
 - Academic transcripts and certificates
 - Financial documents
+
+![Travel documents and passport ready for visa application](blog:travel-documents)
 
 ### 3. Show Strong Financial Proof
 
@@ -221,6 +231,8 @@ The **International English Language Testing System (IELTS)** is the most widely
 
 This guide covers everything you need to score **7+ bands** across all four sections.
 
+![Student preparing for IELTS exam with study materials](blog:ielts-study-session)
+
 ## Understanding the IELTS Format
 
 IELTS Academic has four sections:
@@ -265,6 +277,8 @@ Your **Overall Band Score** is the average of all four sections, rounded to the 
 - Support arguments with examples and reasoning
 - Vary sentence structures (simple, compound, complex)
 - Practice the most common essay types: opinion, discussion, problem-solution, advantages/disadvantages
+
+![University campus where you'll study after passing IELTS](blog:university-campus)
 
 ### Speaking (Target: 7.0+)
 
@@ -321,6 +335,8 @@ Scoring 7+ on IELTS is absolutely achievable with the right strategy and consist
 
 Understanding the **cost of living** is essential when planning to study in the UK. Beyond tuition fees, you'll need to budget for accommodation, food, transport, utilities, and personal expenses. This guide provides an honest, up-to-date breakdown for **2026**.
 
+![Student exploring London city life](blog:uk-city-life)
+
 ## Monthly Cost Overview by City
 
 ### London
@@ -364,6 +380,8 @@ Scotland's capital offers a great student experience with reasonable costs.
 
 ## Accommodation Options
 
+![Student accommodation with cozy study space](blog:student-accommodation)
+
 1. **University Halls**: £500–£900/month. Convenient, all-inclusive, great for first-year students
 2. **Private Shared Flats**: £400–£1,200/month. More freedom, but you handle bills
 3. **Homestay**: £500–£800/month. Live with a local family, meals often included
@@ -372,6 +390,8 @@ Scotland's capital offers a great student experience with reasonable costs.
 **AbroadMantra Tip**: We help students find verified, affordable accommodation near their university. [Learn more about our accommodation service](/services/accommodation).
 
 ## Money-Saving Tips
+
+![Budget-smart grocery shopping for students](blog:budget-shopping)
 
 - **Get a student discount card** (NUS/TOTUM) — saves on food, clothing, and entertainment
 - **Cook at home** — eating out in the UK adds up quickly
@@ -410,6 +430,8 @@ Living in the UK as an international student is manageable with proper budgeting
 ## Introduction
 
 Working part-time while studying abroad helps you **earn money, gain experience, and build your resume**. But each country has different rules about how many hours you can work. This guide covers everything you need to know about part-time work in the UK, Canada, Australia, and USA.
+
+![Student working part-time at a cafe](blog:part-time-work)
 
 ## Work Rights by Country
 
@@ -459,6 +481,8 @@ Working part-time while studying abroad helps you **earn money, gain experience,
 - Teaching assistant positions
 - Lab technician roles
 - Part-time roles at startups
+
+![Professional job interview preparation](blog:job-interview)
 
 ## Where to Find Jobs
 
@@ -519,6 +543,8 @@ Your **Statement of Purpose (SOP)** is one of the most critical documents in you
 
 At AbroadMantra, we've reviewed and helped craft over **1,000 SOPs** that got students into top universities worldwide. Here's everything we've learned.
 
+![Student writing SOP in a library](blog:sop-writing-process)
+
 ## What Admissions Committees Look For
 
 1. **Clarity of purpose** — Do you know what you want and why?
@@ -559,6 +585,8 @@ Outline your short-term (2–5 years) and long-term (10+ years) career plans. Sh
 
 ### Paragraph 6: Conclusion
 Summarize your key points and express enthusiasm. End on a confident, forward-looking note.
+
+![Graduation success after a strong application](blog:graduation-success)
 
 ## SOP Dos and Don'ts
 

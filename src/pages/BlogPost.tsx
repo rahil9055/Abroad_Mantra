@@ -5,7 +5,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getBlogPost, blogPosts } from "@/data/blogPosts";
+import { blogImageMap } from "@/data/blogImages";
 import ReactMarkdown from "react-markdown";
+import type { Components } from "react-markdown";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -125,7 +127,35 @@ const BlogPostPage = () => {
               prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
               prose-img:rounded-2xl prose-img:shadow-md
             ">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              <ReactMarkdown
+                components={{
+                  img: ({ src, alt, ...props }) => {
+                    const resolvedSrc = src?.startsWith("blog:")
+                      ? blogImageMap[src.replace("blog:", "")]
+                      : src;
+                    return (
+                      <figure className="my-8">
+                        <img
+                          src={resolvedSrc}
+                          alt={alt || ""}
+                          className="w-full rounded-2xl shadow-md"
+                          loading="lazy"
+                          width={1200}
+                          height={672}
+                          {...props}
+                        />
+                        {alt && (
+                          <figcaption className="text-center text-xs text-muted-foreground mt-3 italic">
+                            {alt}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  },
+                } as Components}
+              >
+                {post.content}
+              </ReactMarkdown>
             </article>
 
             {/* Tags / Category */}
