@@ -335,6 +335,8 @@ Scoring 7+ on IELTS is absolutely achievable with the right strategy and consist
 
 Understanding the **cost of living** is essential when planning to study in the UK. Beyond tuition fees, you'll need to budget for accommodation, food, transport, utilities, and personal expenses. This guide provides an honest, up-to-date breakdown for **2026**.
 
+![Student exploring London city life](blog:uk-city-life)
+
 ## Monthly Cost Overview by City
 
 ### London
@@ -378,6 +380,8 @@ Scotland's capital offers a great student experience with reasonable costs.
 
 ## Accommodation Options
 
+![Student accommodation with cozy study space](blog:student-accommodation)
+
 1. **University Halls**: £500–£900/month. Convenient, all-inclusive, great for first-year students
 2. **Private Shared Flats**: £400–£1,200/month. More freedom, but you handle bills
 3. **Homestay**: £500–£800/month. Live with a local family, meals often included
@@ -386,6 +390,8 @@ Scotland's capital offers a great student experience with reasonable costs.
 **AbroadMantra Tip**: We help students find verified, affordable accommodation near their university. [Learn more about our accommodation service](/services/accommodation).
 
 ## Money-Saving Tips
+
+![Budget-smart grocery shopping for students](blog:budget-shopping)
 
 - **Get a student discount card** (NUS/TOTUM) — saves on food, clothing, and entertainment
 - **Cook at home** — eating out in the UK adds up quickly
