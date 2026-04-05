@@ -543,6 +543,8 @@ Your **Statement of Purpose (SOP)** is one of the most critical documents in you
 
 At AbroadMantra, we've reviewed and helped craft over **1,000 SOPs** that got students into top universities worldwide. Here's everything we've learned.
 
+![Student writing SOP in a library](blog:sop-writing-process)
+
 ## What Admissions Committees Look For
 
 1. **Clarity of purpose** — Do you know what you want and why?
@@ -583,6 +585,8 @@ Outline your short-term (2–5 years) and long-term (10+ years) career plans. Sh
 
 ### Paragraph 6: Conclusion
 Summarize your key points and express enthusiasm. End on a confident, forward-looking note.
+
+![Graduation success after a strong application](blog:graduation-success)
 
 ## SOP Dos and Don'ts
 
