@@ -20,7 +20,7 @@ const Terms = () => (
       ]},
       { heading: "4. Fees & Payment", content: [
         "Service fees are communicated upfront before engagement. Payment terms, installment options, and accepted payment methods are outlined in your service agreement.",
-        "All fees are in Indian Rupees (INR) unless otherwise specified. Third-party fees such as visa application fees, university application fees, and courier charges are borne by the client separately.",
+        "All fees are in Indian Rupees (INR) unless otherwise specified. Third-party fees such as visa application fee, university application fees, and courier charges are borne by the client separately.",
       ]},
       { heading: "5. No Guarantee of Outcome", content: [
         "While we maintain a high success rate, AbroadMantra does not guarantee visa approval, university admission, or job placement. We provide expert guidance and support to maximize your chances, but final outcomes depend on multiple factors beyond our control.",
