@@ -473,14 +473,8 @@ const Accommodation = () => {
         </div>
       </section>
 
-      {/* Inquiry Form */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <ScrollReveal>
-            <InquiryForm serviceType="accommodation" title="Find Your Perfect Accommodation" />
-          </ScrollReveal>
-        </div>
-      </section>
+
+
 
       <Footer />
     </div>
