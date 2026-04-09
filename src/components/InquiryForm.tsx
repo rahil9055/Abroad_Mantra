@@ -3,7 +3,7 @@ import { Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface InquiryFormProps {
-  serviceType: "accommodation" | "jobs";
+  serviceType: "accommodation" | "jobs" | "consultation" | "visa" | "remonstration";
   title?: string;
 }
 
