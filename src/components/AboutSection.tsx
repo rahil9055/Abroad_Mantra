@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FileText, Briefcase, Home, BookOpen, MessageSquare, GraduationCap, ArrowRight } from "lucide-react";
+import { FileText, Briefcase, Home, BookOpen, MessageSquare, GraduationCap, ArrowRight, ExternalLink } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LottieAnimation from "@/components/LottieAnimation";
 
@@ -17,9 +17,10 @@ const services = [
   {
     icon: BookOpen,
     title: "Prepare for IELTS",
-    desc: "Take the personalized assistance of our in-house IELTS experts and ace your exam.",
+    desc: "Take the personalized assistance of our academic experts and ace your exam. Powered by Writeopedia.",
     cta: "Start prep",
-    path: "/services/tutoring",
+    path: "https://www.writeopedia.com/",
+    external: true,
     iconBg: "bg-accent/15",
     iconColor: "text-accent",
     lottie: "https://assets4.lottiefiles.com/packages/lf20_svy4ivvy.json",
@@ -84,7 +85,6 @@ const AboutSection = () => {
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 0.08} direction={i % 2 === 0 ? "left" : "right"}>
               <div className="group relative bg-card rounded-2xl border border-border p-7 hover:shadow-xl hover:border-primary/20 hover:-translate-y-1 transition-all duration-500">
-                {/* Lottie icon area */}
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`w-14 h-14 rounded-xl ${service.iconBg} flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative overflow-hidden`}>
                     {service.lottie ? (
@@ -95,27 +95,44 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                <h3 className={`font-heading text-lg font-bold ${service.iconColor} mb-2`}>
+                <h3 className={`font-heading text-lg font-bold ${service.iconColor} mb-2 flex items-center gap-2`}>
                   {service.title}
+                  {service.external && <ExternalLink className="h-3.5 w-3.5 opacity-50" />}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                   {service.desc}
                 </p>
 
-                <Link
-                  to={service.path}
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-300 group-hover:shadow-md ${
-                    i % 3 === 0
-                      ? "border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
-                      : i % 3 === 1
-                      ? "border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground"
-                      : "border-success/30 text-success hover:bg-success hover:text-success-foreground"
-                  }`}
-                >
-                  {service.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                {service.external ? (
+                  <a
+                    href={service.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-300 group-hover:shadow-md ${
+                      i % 3 === 0
+                        ? "border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                        : i % 3 === 1
+                        ? "border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground"
+                        : "border-success/30 text-success hover:bg-success hover:text-success-foreground"
+                    }`}
+                  >
+                    {service.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                ) : (
+                  <Link
+                    to={service.path}
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-300 group-hover:shadow-md ${
+                      i % 3 === 0
+                        ? "border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                        : i % 3 === 1
+                        ? "border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground"
+                        : "border-success/30 text-success hover:bg-success hover:text-success-foreground"
+                    }`}
+                  >
+                    {service.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                )}
 
-                {/* Subtle hover gradient */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/3 via-transparent to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
             </ScrollReveal>

@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
+  { icon: Phone, label: "Phone", value: "+91 92748 61114", href: "tel:+919274861114" },
   { icon: Mail, label: "Email", value: "info@abroadmantra.com", href: "mailto:info@abroadmantra.com" },
   { icon: MapPin, label: "Office", value: "123 Education Lane, Hyderabad, India 500032", href: "#map" },
   { icon: Clock, label: "Hours", value: "Mon – Sat: 10 AM – 7 PM", href: null },
@@ -255,7 +255,7 @@ const Contact = () => {
               {/* WhatsApp CTA */}
               <ScrollReveal direction="right" delay={0.15}>
                 <a
-                  href="https://wa.me/"
+                  href="https://wa.me/919274861114"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card gradient-border rounded-2xl p-6 flex items-center gap-4 group hover:-translate-y-1 transition-all duration-300 block"

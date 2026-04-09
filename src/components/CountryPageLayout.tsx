@@ -49,7 +49,7 @@ export interface ApplicationStep {
 export interface CountryPageProps {
   name: string;
   flag: string;
-  heroImage: string;
+  heroImage?: string;
   tagline: string;
   description: string;
   whyStudy: string[];
@@ -96,7 +96,11 @@ const CountryPageLayout = ({
       {/* Hero with Background Image */}
       <section className="relative pt-20 min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt={`Study in ${name}`} className="w-full h-full object-cover" width={1920} height={800} />
+          {heroImage ? (
+            <img src={heroImage} alt={`Study in ${name}`} className="w-full h-full object-cover" width={1920} height={800} />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--primary))]/60" />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--primary))]/90 via-[hsl(var(--primary))]/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))]/50 to-transparent" />
         </div>

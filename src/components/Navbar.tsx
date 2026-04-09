@@ -1,9 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
 import logo from "@/assets/logo_transparent.png";
 
-const navItems = [
+interface NavChild {
+  label: string;
+  path: string;
+  external?: boolean;
+}
+
+interface NavItem {
+  label: string;
+  path: string;
+  children?: NavChild[];
+}
+
+const navItems: NavItem[] = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   {
@@ -15,7 +27,7 @@ const navItems = [
       { label: "Remonstration", path: "/services/remonstration" },
       { label: "Jobs", path: "/services/jobs" },
       { label: "Accommodation", path: "/services/accommodation" },
-      { label: "Tutoring", path: "/services/tutoring" },
+      { label: "Academic Support", path: "https://www.writeopedia.com/", external: true },
     ],
   },
   {
@@ -26,12 +38,44 @@ const navItems = [
       { label: "Australia", path: "/countries/australia" },
       { label: "Canada", path: "/countries/canada" },
       { label: "USA", path: "/countries/usa" },
+      { label: "Germany", path: "/countries/germany" },
+      { label: "Malta", path: "/countries/malta" },
+      { label: "Turkey", path: "/countries/turkey" },
+      { label: "Russia", path: "/countries/russia" },
+      { label: "China", path: "/countries/china" },
+      { label: "Singapore", path: "/countries/singapore" },
+      { label: "Malaysia", path: "/countries/malaysia" },
     ],
   },
-  
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
+
+const NavLink = ({ child, onClick }: { child: NavChild; onClick?: () => void }) => {
+  if (child.external) {
+    return (
+      <a
+        href={child.path}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={onClick}
+        className="flex items-center gap-1.5 px-3 py-2 text-sm text-foreground/70 hover:text-primary hover:bg-secondary rounded-md transition-colors"
+      >
+        {child.label}
+        <ExternalLink className="h-3 w-3 opacity-50" />
+      </a>
+    );
+  }
+  return (
+    <Link
+      to={child.path}
+      onClick={onClick}
+      className="block px-3 py-2 text-sm text-foreground/70 hover:text-primary hover:bg-secondary rounded-md transition-colors"
+    >
+      {child.label}
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,15 +112,9 @@ const Navbar = () => {
                 {item.children && <ChevronDown className="h-3 w-3" />}
               </Link>
               {item.children && openDropdown === item.label && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-card rounded-lg shadow-xl border border-border p-1.5 animate-fade-in">
+                <div className="absolute top-full left-0 mt-1 w-48 bg-card rounded-lg shadow-xl border border-border p-1.5 animate-fade-in max-h-80 overflow-y-auto">
                   {item.children.map((child) => (
-                    <Link
-                      key={child.label}
-                      to={child.path}
-                      className="block px-3 py-2 text-sm text-foreground/70 hover:text-primary hover:bg-secondary rounded-md transition-colors"
-                    >
-                      {child.label}
-                    </Link>
+                    <NavLink key={child.label} child={child} />
                   ))}
                 </div>
               )}
@@ -96,7 +134,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="lg:hidden bg-background border-t border-border animate-fade-in">
+        <div className="lg:hidden bg-background border-t border-border animate-fade-in max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 py-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.label}>
@@ -110,14 +148,7 @@ const Navbar = () => {
                 {item.children && (
                   <div className="pl-6 space-y-1">
                     {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.path}
-                        onClick={() => setIsOpen(false)}
-                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
-                      >
-                        {child.label}
-                      </Link>
+                      <NavLink key={child.label} child={child} onClick={() => setIsOpen(false)} />
                     ))}
                   </div>
                 )}

@@ -228,7 +228,7 @@ const Accommodation = () => {
                 <Link to="/contact" className="group inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground rounded-xl font-semibold text-base hover:scale-105 hover:shadow-xl transition-all duration-300">
                   Find Your Accommodation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all">
+                <a href="https://wa.me/919274861114" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all">
                   <MessageSquare className="h-5 w-5" /> Chat on WhatsApp
                 </a>
               </div>
@@ -463,28 +463,11 @@ const Accommodation = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Inquiry Form */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <ScrollReveal direction="scale">
-            <div className="bg-primary rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/5 rounded-full blur-3xl animate-blob" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl animate-blob" style={{ animationDelay: "-4s" }} />
-              <div className="relative z-10">
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Secure Your Home Before You Fly</h2>
-                <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
-                  Don't arrive homeless. Let us find, verify, and book your perfect accommodation — so you walk off the plane and straight into your new home.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link to="/contact" className="group inline-flex items-center gap-2 px-8 py-4 bg-background text-primary rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-                    Find Accommodation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold text-lg hover:bg-primary-foreground/20 transition-all duration-300 border border-primary-foreground/20">
-                    <MessageSquare className="h-5 w-5" /> WhatsApp Us
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div className="container mx-auto px-4 max-w-3xl">
+          <ScrollReveal>
+            <InquiryForm serviceType="accommodation" title="Find Your Perfect Accommodation" />
           </ScrollReveal>
         </div>
       </section>

@@ -17,12 +17,17 @@ import Consultation from "./pages/services/Consultation.tsx";
 import Remonstration from "./pages/services/Remonstration.tsx";
 import Jobs from "./pages/services/Jobs.tsx";
 import Accommodation from "./pages/services/Accommodation.tsx";
-import Tutoring from "./pages/services/Tutoring.tsx";
 import UK from "./pages/countries/UK.tsx";
 import Australia from "./pages/countries/Australia.tsx";
 import Canada from "./pages/countries/Canada.tsx";
 import USA from "./pages/countries/USA.tsx";
-
+import Germany from "./pages/countries/Germany.tsx";
+import Malta from "./pages/countries/Malta.tsx";
+import Turkey from "./pages/countries/Turkey.tsx";
+import Russia from "./pages/countries/Russia.tsx";
+import China from "./pages/countries/China.tsx";
+import Singapore from "./pages/countries/Singapore.tsx";
+import Malaysia from "./pages/countries/Malaysia.tsx";
 
 import Blog from "./pages/Blog.tsx";
 import BlogPostPage from "./pages/BlogPost.tsx";
@@ -55,12 +60,19 @@ const App = () => (
           <Route path="/services/remonstration" element={<Remonstration />} />
           <Route path="/services/jobs" element={<Jobs />} />
           <Route path="/services/accommodation" element={<Accommodation />} />
-          <Route path="/services/tutoring" element={<Tutoring />} />
+
           <Route path="/countries" element={<PageWrapper title="Study Destinations" />} />
           <Route path="/countries/uk" element={<UK />} />
           <Route path="/countries/australia" element={<Australia />} />
           <Route path="/countries/canada" element={<Canada />} />
           <Route path="/countries/usa" element={<USA />} />
+          <Route path="/countries/germany" element={<Germany />} />
+          <Route path="/countries/malta" element={<Malta />} />
+          <Route path="/countries/turkey" element={<Turkey />} />
+          <Route path="/countries/russia" element={<Russia />} />
+          <Route path="/countries/china" element={<China />} />
+          <Route path="/countries/singapore" element={<Singapore />} />
+          <Route path="/countries/malaysia" element={<Malaysia />} />
           
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />

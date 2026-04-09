@@ -10,17 +10,23 @@ const Footer = () => {
           <div>
             <img src={logo} alt="Abroad Mantra" className="h-16 w-auto mb-4 brightness-110 contrast-110" />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Study, Work, Settle — We Make It Happen. Your trusted partner for international education and career guidance.
+              Study, Work, Settle — We Make It Happen. Your trusted partner for international education and career guidance. All services delivered 100% online & remotely.
             </p>
           </div>
 
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["About Us", "Services", "Countries", "Blog", "Contact"].map((link) => (
-                <li key={link}>
-                  <Link to={`/${link.toLowerCase().replace(/\s+/g, "-")}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                    {link}
+              {[
+                { label: "About Us", path: "/about" },
+                { label: "Services", path: "/services" },
+                { label: "Countries", path: "/countries" },
+                { label: "Blog", path: "/blog" },
+                { label: "Contact", path: "/contact" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link to={link.path} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -30,11 +36,23 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2">
-              {["Visa Assistance", "Consultation", "Job Assistance", "Accommodation", "Tutoring"].map((s) => (
-                <li key={s}>
-                  <Link to={`/services/${s.toLowerCase().split(" ")[0]}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                    {s}
-                  </Link>
+              {[
+                { label: "Visa Assistance", path: "/services/visa" },
+                { label: "Consultation", path: "/services/consultation" },
+                { label: "Job Assistance", path: "/services/jobs" },
+                { label: "Accommodation", path: "/services/accommodation" },
+                { label: "Academic Support", path: "https://www.writeopedia.com/", external: true },
+              ].map((s) => (
+                <li key={s.label}>
+                  {s.external ? (
+                    <a href={s.path} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                      {s.label} ↗
+                    </a>
+                  ) : (
+                    <Link to={s.path} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                      {s.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -47,10 +65,10 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-primary" /> info@abroadmantra.com
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Phone className="h-4 w-4 text-primary" /> +91 XXXXX XXXXX
+                <Phone className="h-4 w-4 text-primary" /> +91 92748 61114
               </li>
               <li className="flex items-start gap-2 text-muted-foreground text-sm">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" /> Your Office Address
+                <MapPin className="h-4 w-4 text-primary mt-0.5" /> Hyderabad, India
               </li>
             </ul>
           </div>
