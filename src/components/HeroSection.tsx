@@ -13,10 +13,6 @@ const countries = [
   { flag: "🇺🇸", name: "USA" },
   { flag: "🇲🇹", name: "Malta" },
   { flag: "🇹🇷", name: "Turkey" },
-  { flag: "🇷🇺", name: "Russia" },
-  { flag: "🇨🇳", name: "China" },
-  { flag: "🇸🇬", name: "Singapore" },
-  { flag: "🇲🇾", name: "Malaysia" },
 ];
 
 const HeroSection = () => {
