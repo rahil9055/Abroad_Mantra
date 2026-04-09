@@ -54,8 +54,16 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
           name: form.name,
           email: form.email,
           phone: form.phone,
-          subject: `${serviceType === "accommodation" ? "Accommodation" : "Job Support"} Inquiry`,
-          message: `Service: ${serviceType === "accommodation" ? "Accommodation Support" : "Job Assistance"}\nPostal Code: ${form.postalCode}\nProgram: ${form.program}\nCountry: ${form.country}\n\n${form.message}`,
+      const serviceLabels: Record<string, string> = {
+        accommodation: "Accommodation Support",
+        jobs: "Job Assistance",
+        consultation: "Study Abroad Consultation",
+        visa: "Visa Assistance",
+        remonstration: "Visa Remonstration",
+      };
+      const serviceLabel = serviceLabels[serviceType] || serviceType;
+          subject: `${serviceLabel} Inquiry`,
+          message: `Service: ${serviceLabel}\nPostal Code: ${form.postalCode}\nProgram: ${form.program}\nCountry: ${form.country}\n\n${form.message}`,
         }),
       });
       if (response.ok) {
