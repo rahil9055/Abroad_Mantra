@@ -6,11 +6,17 @@ import { useTypewriter, useAnimatedCounter, useScrollReveal } from "@/hooks/useA
 import LottieAnimation from "@/components/LottieAnimation";
 
 const countries = [
-  { flag: "🇬🇧", name: "Germany" },
+  { flag: "🇬🇧", name: "UK" },
+  { flag: "🇩🇪", name: "Germany" },
   { flag: "🇨🇦", name: "Canada" },
   { flag: "🇦🇺", name: "Australia" },
   { flag: "🇺🇸", name: "USA" },
-  { flag: "🇳🇿", name: "New Zealand" },
+  { flag: "🇲🇹", name: "Malta" },
+  { flag: "🇹🇷", name: "Turkey" },
+  { flag: "🇷🇺", name: "Russia" },
+  { flag: "🇨🇳", name: "China" },
+  { flag: "🇸🇬", name: "Singapore" },
+  { flag: "🇲🇾", name: "Malaysia" },
 ];
 
 const HeroSection = () => {
@@ -112,7 +118,7 @@ const HeroSection = () => {
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </Link>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/919274861114"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-card text-foreground border border-border rounded-lg font-semibold hover:border-success hover:shadow-lg hover:shadow-success/10 transition-all duration-300"

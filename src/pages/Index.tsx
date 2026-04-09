@@ -19,7 +19,7 @@ const indexJsonLd = {
   description: "Complete support for international students – from visa to jobs.",
   url: "https://abroadmantra.com",
   sameAs: ["https://instagram.com/abroadmantra", "https://facebook.com/abroadmantra", "https://linkedin.com/company/abroadmantra"],
-  contactPoint: { "@type": "ContactPoint", telephone: "+91-98765-43210", contactType: "customer service" },
+  contactPoint: { "@type": "ContactPoint", telephone: "+91-92748-61114", contactType: "customer service" },
 };
 
 const Index = () => {
