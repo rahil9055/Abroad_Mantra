@@ -25,6 +25,7 @@ import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroImg from "@/assets/jobs-hero.jpg";
 import interviewImg from "@/assets/jobs-interview.jpg";
+import InquiryForm from "@/components/InquiryForm";
 import { useState } from "react";
 
 const stats = [

@@ -25,6 +25,7 @@ import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroImg from "@/assets/accommodation-hero.jpg";
 import livingImg from "@/assets/accommodation-living.jpg";
+import InquiryForm from "@/components/InquiryForm";
 import { useState } from "react";
 
 const stats = [
