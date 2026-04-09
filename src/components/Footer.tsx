@@ -62,7 +62,7 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Mail className="h-4 w-4 text-primary" /> info@abroadmantra.com
+                <Mail className="h-4 w-4 text-primary" /> support@abroadmantra.com
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Phone className="h-4 w-4 text-primary" /> +91 92748 61114
