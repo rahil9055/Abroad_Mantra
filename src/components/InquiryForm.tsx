@@ -42,6 +42,15 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
     return Object.keys(e).length === 0;
   };
 
+  const serviceLabels: Record<string, string> = {
+    accommodation: "Accommodation Support",
+    jobs: "Job Assistance",
+    consultation: "Study Abroad Consultation",
+    visa: "Visa Assistance",
+    remonstration: "Visa Remonstration",
+  };
+  const serviceLabel = serviceLabels[serviceType] || serviceType;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
@@ -54,14 +63,6 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
           name: form.name,
           email: form.email,
           phone: form.phone,
-      const serviceLabels: Record<string, string> = {
-        accommodation: "Accommodation Support",
-        jobs: "Job Assistance",
-        consultation: "Study Abroad Consultation",
-        visa: "Visa Assistance",
-        remonstration: "Visa Remonstration",
-      };
-      const serviceLabel = serviceLabels[serviceType] || serviceType;
           subject: `${serviceLabel} Inquiry`,
           message: `Service: ${serviceLabel}\nPostal Code: ${form.postalCode}\nProgram: ${form.program}\nCountry: ${form.country}\n\n${form.message}`,
         }),
