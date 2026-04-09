@@ -178,16 +178,14 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
 
         <div>
           <label className="text-sm font-medium text-foreground mb-1.5 block">
-            {serviceType === "accommodation" ? "Accommodation Requirements *" : "Job Support Requirements *"}
+            Your Requirements *
           </label>
           <textarea
             value={form.message}
             onChange={(e) => handleChange("message", e.target.value)}
             maxLength={MAX_MESSAGE}
             rows={4}
-            placeholder={serviceType === "accommodation"
-              ? "Budget range, preferred area, shared/private, move-in date, special requirements..."
-              : "Type of work (part-time/full-time), field of interest, work experience, availability..."}
+            placeholder={placeholders[serviceType] || "Describe your requirements..."}
             className={`${inputClass("message")} resize-none`}
           />
           <div className="flex justify-between mt-1">
