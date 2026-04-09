@@ -1,3 +1,4 @@
+import InquiryForm from "@/components/InquiryForm";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -227,6 +228,15 @@ const Consultation = () => {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <ScrollReveal>
+            <InquiryForm serviceType="consultation" title="Book Your Free Consultation" />
+          </ScrollReveal>
         </div>
       </section>
 

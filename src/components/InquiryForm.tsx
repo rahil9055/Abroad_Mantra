@@ -3,7 +3,7 @@ import { Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface InquiryFormProps {
-  serviceType: "accommodation" | "jobs";
+  serviceType: "accommodation" | "jobs" | "consultation" | "visa" | "remonstration";
   title?: string;
 }
 
@@ -42,6 +42,15 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
     return Object.keys(e).length === 0;
   };
 
+  const serviceLabels: Record<string, string> = {
+    accommodation: "Accommodation Support",
+    jobs: "Job Assistance",
+    consultation: "Study Abroad Consultation",
+    visa: "Visa Assistance",
+    remonstration: "Visa Remonstration",
+  };
+  const serviceLabel = serviceLabels[serviceType] || serviceType;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
@@ -54,8 +63,8 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
           name: form.name,
           email: form.email,
           phone: form.phone,
-          subject: `${serviceType === "accommodation" ? "Accommodation" : "Job Support"} Inquiry`,
-          message: `Service: ${serviceType === "accommodation" ? "Accommodation Support" : "Job Assistance"}\nPostal Code: ${form.postalCode}\nProgram: ${form.program}\nCountry: ${form.country}\n\n${form.message}`,
+          subject: `${serviceLabel} Inquiry`,
+          message: `Service: ${serviceLabel}\nPostal Code: ${form.postalCode}\nProgram: ${form.program}\nCountry: ${form.country}\n\n${form.message}`,
         }),
       });
       if (response.ok) {
@@ -97,14 +106,28 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
   const inputClass = (field: string) =>
     `w-full px-4 py-3 rounded-lg bg-background border ${errors[field] ? "border-destructive" : "border-border"} text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all`;
 
-  const countries = serviceType === "accommodation"
-    ? ["United Kingdom", "Australia", "Canada", "USA", "Germany", "Malta", "Turkey", "Russia", "China", "Singapore", "Malaysia"]
-    : ["United Kingdom", "Australia", "Canada", "USA", "Germany", "Malta", "Turkey", "Russia", "China", "Singapore", "Malaysia"];
+  const countries = ["United Kingdom", "Australia", "Canada", "USA", "Germany", "Malta", "Turkey", "Russia", "China", "Singapore", "Malaysia"];
+
+  const defaultTitles: Record<string, string> = {
+    accommodation: "Accommodation Inquiry",
+    jobs: "Job Support Inquiry",
+    consultation: "Study Abroad Consultation Inquiry",
+    visa: "Visa Assistance Inquiry",
+    remonstration: "Visa Remonstration Inquiry",
+  };
+
+  const placeholders: Record<string, string> = {
+    accommodation: "Budget range, preferred area, shared/private, move-in date, special requirements...",
+    jobs: "Type of work (part-time/full-time), field of interest, work experience, availability...",
+    consultation: "Your academic background, preferred intake, budget, career goals, any specific questions...",
+    visa: "Visa type needed, current status, any previous applications or refusals, timeline...",
+    remonstration: "Refusal reason, country, university, timeline of previous application, any documents you have...",
+  };
 
   return (
     <div className="glass-card gradient-border rounded-2xl p-8">
       <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
-        {title || (serviceType === "accommodation" ? "Accommodation Inquiry" : "Job Support Inquiry")}
+        {title || defaultTitles[serviceType] || "Service Inquiry"}
       </h2>
       <p className="text-muted-foreground text-sm mb-6">
         Fill in your details and we'll find the best options for you. All support is provided <strong className="text-foreground">100% remotely & online</strong>.
@@ -155,16 +178,14 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
 
         <div>
           <label className="text-sm font-medium text-foreground mb-1.5 block">
-            {serviceType === "accommodation" ? "Accommodation Requirements *" : "Job Support Requirements *"}
+            Your Requirements *
           </label>
           <textarea
             value={form.message}
             onChange={(e) => handleChange("message", e.target.value)}
             maxLength={MAX_MESSAGE}
             rows={4}
-            placeholder={serviceType === "accommodation"
-              ? "Budget range, preferred area, shared/private, move-in date, special requirements..."
-              : "Type of work (part-time/full-time), field of interest, work experience, availability..."}
+            placeholder={placeholders[serviceType] || "Describe your requirements..."}
             className={`${inputClass("message")} resize-none`}
           />
           <div className="flex justify-between mt-1">
