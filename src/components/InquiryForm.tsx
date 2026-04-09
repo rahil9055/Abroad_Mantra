@@ -106,14 +106,28 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
   const inputClass = (field: string) =>
     `w-full px-4 py-3 rounded-lg bg-background border ${errors[field] ? "border-destructive" : "border-border"} text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all`;
 
-  const countries = serviceType === "accommodation"
-    ? ["United Kingdom", "Australia", "Canada", "USA", "Germany", "Malta", "Turkey", "Russia", "China", "Singapore", "Malaysia"]
-    : ["United Kingdom", "Australia", "Canada", "USA", "Germany", "Malta", "Turkey", "Russia", "China", "Singapore", "Malaysia"];
+  const countries = ["United Kingdom", "Australia", "Canada", "USA", "Germany", "Malta", "Turkey", "Russia", "China", "Singapore", "Malaysia"];
+
+  const defaultTitles: Record<string, string> = {
+    accommodation: "Accommodation Inquiry",
+    jobs: "Job Support Inquiry",
+    consultation: "Study Abroad Consultation Inquiry",
+    visa: "Visa Assistance Inquiry",
+    remonstration: "Visa Remonstration Inquiry",
+  };
+
+  const placeholders: Record<string, string> = {
+    accommodation: "Budget range, preferred area, shared/private, move-in date, special requirements...",
+    jobs: "Type of work (part-time/full-time), field of interest, work experience, availability...",
+    consultation: "Your academic background, preferred intake, budget, career goals, any specific questions...",
+    visa: "Visa type needed, current status, any previous applications or refusals, timeline...",
+    remonstration: "Refusal reason, country, university, timeline of previous application, any documents you have...",
+  };
 
   return (
     <div className="glass-card gradient-border rounded-2xl p-8">
       <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
-        {title || (serviceType === "accommodation" ? "Accommodation Inquiry" : "Job Support Inquiry")}
+        {title || defaultTitles[serviceType] || "Service Inquiry"}
       </h2>
       <p className="text-muted-foreground text-sm mb-6">
         Fill in your details and we'll find the best options for you. All support is provided <strong className="text-foreground">100% remotely & online</strong>.
