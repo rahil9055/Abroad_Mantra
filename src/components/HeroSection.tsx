@@ -36,7 +36,7 @@ const HeroSection = () => {
   }, [handleScroll]);
 
   const typedText = useTypewriter(
-    ["From Visa to Jobs", "Accommodation to Support", "Consultation to Career"],
+    ["From Visa to Jobs", "Accommodation to  Support", "Consultation to Career"],
     70, 40, 2500
   );
   const { ref: statsRef, isVisible: statsVisible } = useScrollReveal(0.3);
