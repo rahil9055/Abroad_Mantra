@@ -254,6 +254,15 @@ const Accommodation = () => {
         </div>
       </section>
 
+      {/* Inquiry Form - Prominent Placement */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <ScrollReveal>
+            <InquiryForm serviceType="accommodation" title="Find Your Perfect Accommodation" />
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Amenities Strip */}
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
@@ -464,14 +473,8 @@ const Accommodation = () => {
         </div>
       </section>
 
-      {/* Inquiry Form */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <ScrollReveal>
-            <InquiryForm serviceType="accommodation" title="Find Your Perfect Accommodation" />
-          </ScrollReveal>
-        </div>
-      </section>
+
+
 
       <Footer />
     </div>

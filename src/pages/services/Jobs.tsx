@@ -258,6 +258,15 @@ const Jobs = () => {
         </div>
       </section>
 
+      {/* Inquiry Form - Prominent Placement */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <ScrollReveal>
+            <InquiryForm serviceType="jobs" title="Get Job Support" />
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Intro with Image */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -480,14 +489,8 @@ const Jobs = () => {
         </div>
       </section>
 
-      {/* Inquiry Form */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <ScrollReveal>
-            <InquiryForm serviceType="jobs" title="Get Job Support" />
-          </ScrollReveal>
-        </div>
-      </section>
+
+
 
       <Footer />
     </div>
