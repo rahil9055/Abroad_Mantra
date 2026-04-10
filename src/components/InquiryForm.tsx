@@ -149,7 +149,7 @@ const InquiryForm = ({ serviceType, title }: InquiryFormProps) => {
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
             <label className="text-sm font-medium text-foreground mb-1.5 block">Phone Number</label>
-            <input type="tel" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} maxLength={MAX_PHONE} placeholder="+1 92748 61114" className={inputClass("phone")} />
+            <input type="tel" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} maxLength={MAX_PHONE} placeholder="+91 92748 61114" className={inputClass("phone")} />
           </div>
           <div>
             <label className="text-sm font-medium text-foreground mb-1.5 block">Postal / ZIP Code *</label>

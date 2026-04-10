@@ -95,16 +95,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">
+        <div className="border-t border-border mt-12 pt-8 flex flex-col items-center gap-4">
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">© 2026 Abroad Mantra. All rights reserved.</p>
-            <p className="text-muted-foreground/60 text-xs mt-1">Powered by <span className="font-semibold text-muted-foreground/80">Eduteam Pvt LTD</span></p>
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+              <Link to="/privacy-policy" className="text-muted-foreground text-sm hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-muted-foreground text-sm hover:text-primary transition-colors">Terms & Conditions</Link>
+              <Link to="/refund-policy" className="text-muted-foreground text-sm hover:text-primary transition-colors">Refund Policy</Link>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <Link to="/privacy-policy" className="text-muted-foreground text-sm hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-muted-foreground text-sm hover:text-primary transition-colors">Terms & Conditions</Link>
-            <Link to="/refund-policy" className="text-muted-foreground text-sm hover:text-primary transition-colors">Refund Policy</Link>
-          </div>
+          <p className="text-muted-foreground/60 text-xs">Powered by <span className="font-semibold text-muted-foreground/80">Eduteam Pvt LTD</span></p>
         </div>
       </div>
     </footer>

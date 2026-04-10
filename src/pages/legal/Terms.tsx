@@ -38,7 +38,7 @@ const Terms = () => (
         "These Terms & Conditions are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Hyderabad, Telangana.",
       ]},
       { heading: "10. Contact", content: [
-        "For questions about these terms, contact us at support@abroadmantra.com or call +1 92748 61114.",
+        "For questions about these terms, contact us at support@abroadmantra.com or call +91 92748 61114.",
       ]},
     ]}
   />
