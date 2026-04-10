@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Facebook, Linkedin, Twitter, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Facebook, Linkedin, CheckCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
