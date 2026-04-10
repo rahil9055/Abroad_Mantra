@@ -86,7 +86,7 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-primary shrink-0" /> <a href="mailto:support@abroadmantra.com" className="hover:text-primary transition-colors">support@abroadmantra.com</a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Phone className="h-4 w-4 text-primary shrink-0" /> +1 92748 61114
+                <Phone className="h-4 w-4 text-primary shrink-0" /> +91 92748 61114
               </li>
               <li className="flex items-start gap-2 text-muted-foreground text-sm">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" /> University Rd, Leicester LE1 7RH, United Kingdom

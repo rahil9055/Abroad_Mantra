@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 92748 61114", href: "tel:+19274861114" },
+  { icon: Phone, label: "Phone", value: "+91 92748 61114", href: "tel:+919274861114" },
   { icon: Mail, label: "Email", value: "support@abroadmantra.com", href: "mailto:support@abroadmantra.com" },
   { icon: MapPin, label: "Address", value: "University Rd, Leicester LE1 7RH, United Kingdom", href: "https://maps.google.com/?q=University+Rd,+Leicester+LE1+7RH,+United+Kingdom" },
   { icon: Clock, label: "Hours", value: "Mon – Sat: 10 AM – 7 PM", href: null },
