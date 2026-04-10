@@ -178,7 +178,7 @@ const Contact = () => {
                               value={form.phone}
                               onChange={(e) => handleChange("phone", e.target.value)}
                               maxLength={MAX_PHONE}
-                              placeholder="+91 98765 43210"
+                              placeholder="+1 92748 61114"
                               className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
                             />
                           </div>
