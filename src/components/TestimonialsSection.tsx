@@ -2,10 +2,6 @@ import { useState, useEffect, useCallback } from "react";
 import { Star, Quote, ChevronLeft, ChevronRight, GraduationCap, Users, Globe, Award } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useScrollReveal, useAnimatedCounter } from "@/hooks/useAnimations";
-import testimonial1 from "@/assets/testimonial-1.jpg";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
-
 const testimonials = [
   {
     name: "Rahul Patel",
@@ -13,7 +9,7 @@ const testimonials = [
     flag: "🇬🇧",
     university: "University of Manchester",
     text: "Got my UK Visa and job with Abroad Mantra's incredible support. The team was available 24/7 and made every step seamless. Best recommendation for anyone planning to study abroad!",
-    image: testimonial1,
+    initials: "RP",
     rating: 5,
   },
   {
@@ -22,7 +18,7 @@ const testimonials = [
     flag: "🇦🇺",
     university: "University of Melbourne",
     text: "Found the perfect accommodation & job placement. Every step was handled professionally. I couldn't have asked for a better consultancy to guide me through the entire process.",
-    image: testimonial2,
+    initials: "AG",
     rating: 5,
   },
   {
@@ -31,7 +27,7 @@ const testimonials = [
     flag: "🇨🇦",
     university: "University of Toronto",
     text: "From university selection to settling in Canada, their guidance was exceptional throughout. The counselors are knowledgeable and truly care about your success abroad.",
-    image: testimonial3,
+    initials: "VS",
     rating: 5,
   },
 ];
@@ -131,22 +127,17 @@ const TestimonialsSection = () => {
               {/* Quote accent */}
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-accent to-primary" />
               
-              <div className="grid md:grid-cols-[280px_1fr] gap-0">
-                {/* Image side */}
-                <div className="relative overflow-hidden">
+              <div className="grid md:grid-cols-[200px_1fr] gap-0">
+                {/* Avatar side */}
+                <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex flex-col items-center justify-center p-8">
                   <div
                     key={active}
-                    className="animate-fade-in"
+                    className="animate-fade-in flex flex-col items-center gap-4"
                   >
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-full h-64 md:h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10" />
-                    {/* Country badge */}
-                    <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-medium">
+                    <div className="w-24 h-24 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
+                      <span className="text-3xl font-bold text-primary font-heading">{t.initials}</span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 backdrop-blur-md rounded-full text-foreground text-sm font-medium">
                       <span className="text-lg">{t.flag}</span> {t.country}
                     </div>
                   </div>
