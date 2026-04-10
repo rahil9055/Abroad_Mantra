@@ -94,7 +94,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Contact Us – AbroadMantra | Free Study Abroad Consultation"
-        description="Get in touch with AbroadMantra for free study abroad consultation. Call, email, WhatsApp, or visit our Hyderabad office. We respond within 24 hours."
+        description="Get in touch with AbroadMantra for free study abroad consultation. Call, email, or WhatsApp us. We respond within 24 hours."
       />
       <Navbar />
 

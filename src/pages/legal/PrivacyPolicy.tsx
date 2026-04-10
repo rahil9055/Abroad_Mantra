@@ -31,7 +31,7 @@ const PrivacyPolicy = () => (
         "We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this policy. Application-related data is kept for a minimum of 3 years for record-keeping purposes.",
       ]},
       { heading: "8. Contact Us", content: [
-        "If you have any questions about this Privacy Policy or our data practices, please contact us at privacy@abroadmantra.com or call us at +91 98765 43210.",
+        "If you have any questions about this Privacy Policy or our data practices, please contact us at support@abroadmantra.com or call us at +91 92748 61114.",
       ]},
     ]}
   />
