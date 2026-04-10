@@ -428,7 +428,7 @@ const About = () => {
                     Book Free Consultation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <a
-                    href="https://wa.me/919274861114"
+                    href="https://wa.me/19274861114"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold text-lg hover:bg-primary-foreground/20 transition-all duration-300 border border-primary-foreground/20"
