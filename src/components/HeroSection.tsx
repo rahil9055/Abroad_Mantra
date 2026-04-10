@@ -114,7 +114,7 @@ const HeroSection = () => {
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </Link>
               <a
-                href="https://wa.me/19274861114"
+                href="https://wa.me/919274861114"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-card text-foreground border border-border rounded-lg font-semibold hover:border-success hover:shadow-lg hover:shadow-success/10 transition-all duration-300"

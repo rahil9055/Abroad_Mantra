@@ -125,7 +125,7 @@ const CountryPageLayout = ({
                   Get Free Counselling <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="https://wa.me/19274861114"
+                  href="https://wa.me/919274861114"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground/15 backdrop-blur-md text-primary-foreground rounded-xl font-semibold text-lg border border-primary-foreground/25 hover:bg-primary-foreground/25 transition-all duration-300"
                 >
                   WhatsApp Us
@@ -482,7 +482,7 @@ const CountryPageLayout = ({
                     Book Free Consultation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <a
-                    href="https://wa.me/19274861114"
+                    href="https://wa.me/919274861114"
                     className="inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground/15 text-primary-foreground rounded-xl font-semibold text-lg border border-primary-foreground/25 hover:bg-primary-foreground/25 transition-all duration-300"
                   >
                     Chat on WhatsApp
