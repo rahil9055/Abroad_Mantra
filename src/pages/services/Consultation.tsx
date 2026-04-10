@@ -202,7 +202,7 @@ const Consultation = () => {
                   Book Free Consultation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919274861114"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all"
