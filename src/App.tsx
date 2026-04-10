@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound.tsx";
 import PlaceholderPage from "./components/PlaceholderPage.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from "./components/Footer.tsx";
+import Services from "./pages/Services.tsx";
 import VisaAssistance from "./pages/services/VisaAssistance.tsx";
 import Consultation from "./pages/services/Consultation.tsx";
 import Remonstration from "./pages/services/Remonstration.tsx";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           
+          <Route path="/services" element={<Services />} />
           <Route path="/services/visa" element={<VisaAssistance />} />
           <Route path="/services/consultation" element={<Consultation />} />
           <Route path="/services/remonstration" element={<Remonstration />} />
