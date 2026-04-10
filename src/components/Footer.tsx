@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <img src={logo} alt="Abroad Mantra" className="h-16 w-auto mb-4 brightness-110 contrast-110" />
+            <img src={logo} alt="Abroad Mantra" className="h-20 w-auto mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Study, Work, Settle — We Make It Happen. Your trusted partner for international education and career guidance. All services delivered 100% online & remotely.
             </p>
@@ -62,13 +62,13 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Mail className="h-4 w-4 text-primary" /> support@abroadmantra.com
+                <Mail className="h-4 w-4 text-primary" /> <a href="mailto:support@abroadmantra.com" className="hover:text-primary transition-colors">support@abroadmantra.com</a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Phone className="h-4 w-4 text-primary" /> +91 92748 61114
               </li>
               <li className="flex items-start gap-2 text-muted-foreground text-sm">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" /> Hyderabad, India
+                <MapPin className="h-4 w-4 text-primary mt-0.5" /> University Rd, Leicester LE1 7RH, United Kingdom
               </li>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Facebook, Linkedin, Twitter, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Facebook, Linkedin, CheckCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -9,16 +9,15 @@ import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 92748 61114", href: "tel:+919274861114" },
-  { icon: Mail, label: "Email", value: "info@abroadmantra.com", href: "mailto:info@abroadmantra.com" },
-  { icon: MapPin, label: "Office", value: "123 Education Lane, Hyderabad, India 500032", href: "#map" },
+  { icon: Mail, label: "Email", value: "support@abroadmantra.com", href: "mailto:support@abroadmantra.com" },
+  { icon: MapPin, label: "Address", value: "University Rd, Leicester LE1 7RH, United Kingdom", href: "https://maps.google.com/?q=University+Rd,+Leicester+LE1+7RH,+United+Kingdom" },
   { icon: Clock, label: "Hours", value: "Mon – Sat: 10 AM – 7 PM", href: null },
 ];
 
 const socials = [
-  { icon: Instagram, label: "Instagram", href: "https://instagram.com/" },
-  { icon: Facebook, label: "Facebook", href: "https://facebook.com/" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/abroad__mantra" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61572003054958" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/abroad-mantra-341365402/" },
 ];
 
 const MAX_NAME = 100;
@@ -295,14 +294,14 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map */}
-      <section id="map" className="py-20 bg-secondary">
+      {/* Location */}
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Location</span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Visit Our <span className="text-primary">Office</span>
+                Our <span className="text-primary">Address</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mt-3 rounded-full" />
             </div>
@@ -311,7 +310,7 @@ const Contact = () => {
             <div className="glass-card gradient-border rounded-2xl overflow-hidden">
               <iframe
                 title="AbroadMantra Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3169824679!2d78.24323159453122!3d17.412608699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.5!2d-1.1245!3d52.6214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877614c0e5e5b5b%3A0x38c0659e4f8d6f0!2sUniversity%20Rd%2C%20Leicester%20LE1%207RH%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}

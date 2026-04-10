@@ -92,7 +92,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border" : "bg-background/80 backdrop-blur-sm"}`}>
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Abroad Mantra" className="h-12 w-auto brightness-110 contrast-110" />
+          <img src={logo} alt="Abroad Mantra" className="h-14 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
