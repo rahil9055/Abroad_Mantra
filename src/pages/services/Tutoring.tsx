@@ -206,7 +206,7 @@ const Tutoring = () => {
                 <Link to="/contact" className="group inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground rounded-xl font-semibold text-base hover:scale-105 hover:shadow-xl transition-all duration-300">
                   Get a Free Trial Session <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a href="https://wa.me/919274861114" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all">
+                <a href="https://wa.me/19274861114" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all">
                   <MessageSquare className="h-5 w-5" /> Chat on WhatsApp
                 </a>
               </div>
@@ -468,7 +468,7 @@ const Tutoring = () => {
                   <Link to="/contact" className="group inline-flex items-center gap-2 px-8 py-4 bg-background text-primary rounded-xl font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
                     Book Free Trial <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <a href="https://wa.me/919274861114" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold text-lg hover:bg-primary-foreground/20 transition-all duration-300 border border-primary-foreground/20">
+                  <a href="https://wa.me/19274861114" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold text-lg hover:bg-primary-foreground/20 transition-all duration-300 border border-primary-foreground/20">
                     <MessageSquare className="h-5 w-5" /> WhatsApp Us
                   </a>
                 </div>

@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 92748 61114", href: "tel:+919274861114" },
+  { icon: Phone, label: "Phone", value: "+1 92748 61114", href: "tel:+19274861114" },
   { icon: Mail, label: "Email", value: "support@abroadmantra.com", href: "mailto:support@abroadmantra.com" },
   { icon: MapPin, label: "Address", value: "University Rd, Leicester LE1 7RH, United Kingdom", href: "https://maps.google.com/?q=University+Rd,+Leicester+LE1+7RH,+United+Kingdom" },
   { icon: Clock, label: "Hours", value: "Mon – Sat: 10 AM – 7 PM", href: null },
@@ -178,7 +178,7 @@ const Contact = () => {
                               value={form.phone}
                               onChange={(e) => handleChange("phone", e.target.value)}
                               maxLength={MAX_PHONE}
-                              placeholder="+91 98765 43210"
+                              placeholder="+1 92748 61114"
                               className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
                             />
                           </div>
@@ -254,7 +254,7 @@ const Contact = () => {
               {/* WhatsApp CTA */}
               <ScrollReveal direction="right" delay={0.15}>
                 <a
-                  href="https://wa.me/919274861114"
+                  href="https://wa.me/19274861114"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card gradient-border rounded-2xl p-6 flex items-center gap-4 group hover:-translate-y-1 transition-all duration-300 block"

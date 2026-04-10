@@ -229,7 +229,7 @@ const Accommodation = () => {
                 <Link to="/contact" className="group inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground rounded-xl font-semibold text-base hover:scale-105 hover:shadow-xl transition-all duration-300">
                   Find Your Accommodation <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a href="https://wa.me/919274861114" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all">
+                <a href="https://wa.me/19274861114" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 bg-secondary text-foreground rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all">
                   <MessageSquare className="h-5 w-5" /> Chat on WhatsApp
                 </a>
               </div>

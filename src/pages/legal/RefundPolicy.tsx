@@ -34,7 +34,7 @@ const RefundPolicy = () => (
         "AbroadMantra reserves the right to modify this Refund Policy at any time. Changes will be posted on this page with an updated date. Continued use of our services constitutes acceptance of the revised policy.",
       ]},
       { heading: "9. Contact", content: [
-        "For refund-related queries, contact us at support@abroadmantra.com or call +91 92748 61114.",
+        "For refund-related queries, contact us at support@abroadmantra.com or call +1 92748 61114.",
       ]},
     ]}
   />
