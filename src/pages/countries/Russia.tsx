@@ -1,9 +1,11 @@
 import { GraduationCap, Clock, Briefcase, Home } from "lucide-react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import heroImg from "@/assets/countries/russia-hero.jpg";
 
 const Russia = () => (
   <CountryPageLayout
     name="Russia"
+    heroImage={heroImg}
     flag="🇷🇺"
     tagline="World-class medical and engineering programs at affordable costs with rich academic traditions."
     description="Russia offers internationally recognized degrees, particularly in medicine, engineering, and sciences, at a fraction of the cost of Western countries. With over 700 universities and a long tradition of academic excellence, Russia attracts 300,000+ international students annually. All our services are provided 100% remotely & online."

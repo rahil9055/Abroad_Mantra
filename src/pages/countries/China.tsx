@@ -1,9 +1,11 @@
 import { GraduationCap, Clock, Briefcase, Home } from "lucide-react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import heroImg from "@/assets/countries/china-hero.jpg";
 
 const China = () => (
   <CountryPageLayout
     name="China"
+    heroImage={heroImg}
     flag="🇨🇳"
     tagline="World-class STEM programs, generous CSC scholarships, and Asia's largest economy await you."
     description="China has become one of the top study destinations globally, offering generous scholarships through the Chinese Scholarship Council (CSC), world-class STEM and medical programs, and unparalleled exposure to the world's second-largest economy. With 3,000+ universities and rapidly climbing global rankings, China is the future of higher education. All our services are provided 100% remotely & online."

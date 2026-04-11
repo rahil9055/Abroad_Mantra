@@ -13,6 +13,8 @@ import PlaceholderPage from "./components/PlaceholderPage.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from "./components/Footer.tsx";
 import Services from "./pages/Services.tsx";
+import Tutoring from "./pages/services/Tutoring.tsx";
+import Countries from "./pages/Countries.tsx";
 import VisaAssistance from "./pages/services/VisaAssistance.tsx";
 import Consultation from "./pages/services/Consultation.tsx";
 import Remonstration from "./pages/services/Remonstration.tsx";
@@ -62,8 +64,9 @@ const App = () => (
           <Route path="/services/remonstration" element={<Remonstration />} />
           <Route path="/services/jobs" element={<Jobs />} />
           <Route path="/services/accommodation" element={<Accommodation />} />
+          <Route path="/services/tutoring" element={<Tutoring />} />
 
-          <Route path="/countries" element={<PageWrapper title="Study Destinations" />} />
+          <Route path="/countries" element={<Countries />} />
           <Route path="/countries/uk" element={<UK />} />
           <Route path="/countries/australia" element={<Australia />} />
           <Route path="/countries/canada" element={<Canada />} />

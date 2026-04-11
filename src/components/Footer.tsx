@@ -62,18 +62,12 @@ const Footer = () => {
                 { label: "Consultation", path: "/services/consultation" },
                 { label: "Job Assistance", path: "/services/jobs" },
                 { label: "Accommodation", path: "/services/accommodation" },
-                { label: "Academic Support", path: "https://www.writeopedia.com/", external: true },
+                { label: "Academic Support", path: "/services/tutoring" },
               ].map((s) => (
                 <li key={s.label}>
-                  {s.external ? (
-                    <a href={s.path} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                      {s.label} ↗
-                    </a>
-                  ) : (
-                    <Link to={s.path} className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                      {s.label}
-                    </Link>
-                  )}
+                  <Link to={s.path} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                    {s.label}
+                  </Link>
                 </li>
               ))}
             </ul>
