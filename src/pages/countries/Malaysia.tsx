@@ -5,6 +5,7 @@ import heroImg from "@/assets/countries/malaysia-hero.jpg";
 const Malaysia = () => (
   <CountryPageLayout
     name="Malaysia"
+    heroImage={heroImg}
     flag="🇲🇾"
     tagline="Affordable world-class education in a multicultural paradise with growing tech opportunities."
     description="Malaysia is rapidly emerging as a top study destination in Asia, offering affordable tuition, English-medium education, and a rich multicultural experience. With campuses of top UK and Australian universities, world-class facilities, and a cost of living that's a fraction of Western countries, Malaysia gives you international quality at local prices. All our services are provided 100% remotely & online."

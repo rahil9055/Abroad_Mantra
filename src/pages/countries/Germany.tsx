@@ -5,6 +5,7 @@ import heroImg from "@/assets/countries/germany-hero.jpg";
 const Germany = () => (
   <CountryPageLayout
     name="Germany"
+    heroImage={heroImg}
     flag="🇩🇪"
     tagline="Study in Europe's economic powerhouse with tuition-free public universities and world-class engineering programs."
     description="Germany is one of the most popular study destinations for international students, offering tuition-free education at public universities, a strong job market, and an 18-month post-study work visa. With over 400,000 international students, Germany's research-driven education system and thriving economy make it ideal for STEM, business, and medical studies. All our services are provided 100% remotely & online."

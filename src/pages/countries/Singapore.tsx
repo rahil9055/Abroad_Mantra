@@ -5,6 +5,7 @@ import heroImg from "@/assets/countries/singapore-hero.jpg";
 const Singapore = () => (
   <CountryPageLayout
     name="Singapore"
+    heroImage={heroImg}
     flag="🇸🇬"
     tagline="Asia's education hub with world-ranked universities, a global business center, and unmatched safety."
     description="Singapore combines world-class education with a vibrant multicultural society and one of the strongest economies in Asia. Home to two universities in the global top 15, Singapore offers exceptional academic quality, strong industry connections, and excellent career prospects. All our services are provided 100% remotely & online."

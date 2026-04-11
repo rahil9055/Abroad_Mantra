@@ -5,6 +5,7 @@ import heroImg from "@/assets/countries/malta-hero.jpg";
 const Malta = () => (
   <CountryPageLayout
     name="Malta"
+    heroImage={heroImg}
     flag="🇲🇹"
     tagline="Study in an English-speaking EU island nation with affordable tuition and a Mediterranean lifestyle."
     description="Malta is an emerging study destination offering English-medium education, EU recognition, affordable living, and a vibrant multicultural environment. With its strategic location, strong gaming and fintech industries, and welcoming culture, Malta attracts students from over 90 countries. All our services are provided 100% remotely & online."

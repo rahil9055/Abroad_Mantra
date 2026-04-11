@@ -5,6 +5,7 @@ import heroImg from "@/assets/countries/turkey-hero.jpg";
 const Turkey = () => (
   <CountryPageLayout
     name="Turkey"
+    heroImage={heroImg}
     flag="🇹🇷"
     tagline="Affordable education at the crossroads of Europe and Asia with generous government scholarships."
     description="Turkey offers a unique blend of Eastern and Western cultures, affordable world-class education, and generous scholarship programs through Türkiye Scholarships. With over 200 universities and a rapidly growing economy, Turkey attracts students from 190+ countries. All our services are provided 100% remotely & online."
