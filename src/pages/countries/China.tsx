@@ -1,5 +1,6 @@
 import { GraduationCap, Clock, Briefcase, Home } from "lucide-react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import heroImg from "@/assets/countries/china-hero.jpg";
 
 const China = () => (
   <CountryPageLayout

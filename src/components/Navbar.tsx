@@ -27,7 +27,7 @@ const navItems: NavItem[] = [
       { label: "Remonstration", path: "/services/remonstration" },
       { label: "Jobs", path: "/services/jobs" },
       { label: "Accommodation", path: "/services/accommodation" },
-      { label: "Academic Support", path: "https://www.writeopedia.com/", external: true },
+      { label: "Academic Support", path: "/services/tutoring" },
     ],
   },
   {

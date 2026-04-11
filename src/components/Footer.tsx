@@ -62,7 +62,7 @@ const Footer = () => {
                 { label: "Consultation", path: "/services/consultation" },
                 { label: "Job Assistance", path: "/services/jobs" },
                 { label: "Accommodation", path: "/services/accommodation" },
-                { label: "Academic Support", path: "https://www.writeopedia.com/", external: true },
+                { label: "Academic Support", path: "/services/tutoring" },
               ].map((s) => (
                 <li key={s.label}>
                   {s.external ? (
