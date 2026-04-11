@@ -15,6 +15,7 @@ import Footer from "./components/Footer.tsx";
 import Services from "./pages/Services.tsx";
 import Tutoring from "./pages/services/Tutoring.tsx";
 import Countries from "./pages/Countries.tsx";
+import VisaAssistance from "./pages/services/VisaAssistance.tsx";
 import Consultation from "./pages/services/Consultation.tsx";
 import Remonstration from "./pages/services/Remonstration.tsx";
 import Jobs from "./pages/services/Jobs.tsx";
