@@ -64,8 +64,9 @@ const App = () => (
           <Route path="/services/remonstration" element={<Remonstration />} />
           <Route path="/services/jobs" element={<Jobs />} />
           <Route path="/services/accommodation" element={<Accommodation />} />
+          <Route path="/services/tutoring" element={<Tutoring />} />
 
-          <Route path="/countries" element={<PageWrapper title="Study Destinations" />} />
+          <Route path="/countries" element={<Countries />} />
           <Route path="/countries/uk" element={<UK />} />
           <Route path="/countries/australia" element={<Australia />} />
           <Route path="/countries/canada" element={<Canada />} />
