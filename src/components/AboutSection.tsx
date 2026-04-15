@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FileText, Briefcase, Home, BookOpen, MessageSquare, GraduationCap, ArrowRight, ExternalLink } from "lucide-react";
+import { FileText, Briefcase, Home, BookOpen, MessageSquare, GraduationCap, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LottieAnimation from "@/components/LottieAnimation";
 
