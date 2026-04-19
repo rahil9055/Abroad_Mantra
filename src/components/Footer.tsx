@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <img src={logo} alt="Abroad Mantra" className="h-28 w-auto mb-4" />
+            <img src={logo} alt="Abroad Mantra" className="h-36 w-auto mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed mb-5">
               Study, Work, Settle — We Make It Happen. Your trusted partner for international education and career guidance.
             </p>
