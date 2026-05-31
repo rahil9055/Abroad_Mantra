@@ -33,7 +33,6 @@ import Singapore from "./pages/countries/Singapore.tsx";
 import Malaysia from "./pages/countries/Malaysia.tsx";
 
 import Blog from "./pages/Blog.tsx";
-import BlogPostPage from "./pages/BlogPost.tsx";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy.tsx";
 import Terms from "./pages/legal/Terms.tsx";
 import RefundPolicy from "./pages/legal/RefundPolicy.tsx";
@@ -80,7 +79,6 @@ const App = () => (
           <Route path="/countries/malaysia" element={<Malaysia />} />
           
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
           
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
