@@ -82,7 +82,7 @@ const services = [
 ];
 
 const team = [
-  { name: "Rahul Sharma", role: "Founder & CEO", desc: "10+ years in international education. Studied in the UK himself. Passionate about making study abroad accessible to every Indian student.", initials: "RS" },
+  { name: "Smit Lakhlani", role: "Founder & CEO", desc: "10+ years in international education. Studied in the UK himself. Passionate about making study abroad accessible to every Indian student.", initials: "RS" },
   { name: "Priya Patel", role: "Head of Visa Services", desc: "Former embassy consultant. Expert in UK, Canada & Australia visa processes. Has personally handled 1,500+ visa applications.", initials: "PP" },
   { name: "Amit Kumar", role: "Senior Career Counselor", desc: "MBA from University of Toronto. Helps students find the perfect course, university, and career path based on data-driven analysis.", initials: "AK" },
   { name: "Sneha Reddy", role: "Student Experience Lead", desc: "Ensures every student has seamless accommodation, settling-in support, and ongoing assistance throughout their time abroad.", initials: "SR" },
@@ -171,7 +171,7 @@ const About = () => {
                   <span className="text-primary">Frustration</span>
                 </h2>
                 <p className="text-muted-foreground text-base leading-relaxed mt-5">
-                  In 2018, our founder Rahul Sharma watched a close friend's study abroad dream shatter — not because she wasn't qualified, but because her consultant gave her generic, commission-driven advice that led to a visa refusal. The right guidance could have changed everything.
+                  In 2018, our founder Smit Lakhlani watched a close friend's study abroad dream shatter — not because she wasn't qualified, but because her consultant gave her generic, commission-driven advice that led to a visa refusal. The right guidance could have changed everything.
                 </p>
                 <p className="text-muted-foreground text-base leading-relaxed mt-4">
                   That frustration became AbroadMantra's founding principle: <strong className="text-foreground">every student deserves honest, personalized guidance — regardless of their budget</strong>. We started with 3 people in a small office. Today, we're a team of 20+ specialists who've guided over 5,000 students to universities in 15+ countries.
