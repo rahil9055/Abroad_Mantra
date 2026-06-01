@@ -82,7 +82,7 @@ const services = [
 ];
 
 const team = [
-  { name: "Smit Lakhlani", role: "Founder & CEO", desc: "10+ years in international education. Studied in the UK himself. Passionate about making study abroad accessible to every Indian student.", initials: "RS" },
+  { name: "Smit Lakhlani", role: "Founder & CEO", desc: "10+ years in international education. Studied in the UK himself. Passionate about making study abroad accessible to every Indian student.", initials: "SL" },
   { name: "Priya Patel", role: "Head of Visa Services", desc: "Former embassy consultant. Expert in UK, Canada & Australia visa processes. Has personally handled 1,500+ visa applications.", initials: "PP" },
   { name: "Amit Kumar", role: "Senior Career Counselor", desc: "MBA from University of Toronto. Helps students find the perfect course, university, and career path based on data-driven analysis.", initials: "AK" },
   { name: "Sneha Reddy", role: "Student Experience Lead", desc: "Ensures every student has seamless accommodation, settling-in support, and ongoing assistance throughout their time abroad.", initials: "SR" },
