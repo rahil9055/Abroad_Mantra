@@ -1,6 +1,6 @@
 import Parser from 'rss-parser';
 
-const MEDIUM_RSS_URL = 'https://medium.com/feed/@smit.lakhlani24';
+const MEDIUM_RSS_URL = 'https://medium.com/feed/@rahil9055';
 const MAX_POSTS = 6;
 
 function extractFirstImage(content) {

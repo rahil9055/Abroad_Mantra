@@ -198,7 +198,7 @@ const Blog = () => {
           <ScrollReveal>
             <div className="text-center">
               <Link
-                to="https://medium.com/@smit.lakhlani24"
+                to="https://medium.com/@rahil9055"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-7 py-3 rounded-2xl border border-border text-muted-foreground text-sm font-semibold hover:border-primary/40 hover:text-primary transition-all duration-300"
